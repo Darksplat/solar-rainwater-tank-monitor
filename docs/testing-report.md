@@ -17,7 +17,7 @@ This report distinguishes actual software execution from physical hardware behav
 | Electrical/PCB | Complete schematic ERC/board DRC/export audit | Reviewed and passing | Complete circuit/layout absent | NOT RUN / INCOMPLETE |
 | Physical acceptance | Procedures in hardware-validation.md | Measured evidence | Hardware unavailable | NOT RUN |
 | HA runtime/network/OTA | Actual HA and Thread network | Reconnect, alerts and OTA verified | No device/network session supplied | NOT RUN |
-| GitHub Actions | Push to actual GitHub repository | Hosted validation run | Repository created by owner; hosted run pending | NOT RUN |
+| GitHub Actions | Fresh Ubuntu runners, ESPHome config/build for each node plus calculation tests | All three jobs pass | All three jobs passed; run 42549543964 | PASS software only |
 
 Corrective actions during this work:
 
