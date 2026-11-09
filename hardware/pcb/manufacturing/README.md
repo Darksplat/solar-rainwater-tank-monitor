@@ -1,0 +1,9 @@
+# Revision 0.2 development fabrication package
+
+Generated from the routed KiCad 10 board. Native ERC/DRC: zero violations and zero unconnected pads. `tools/validate_manufacturing.py` checks source-to-board pad nets and export structure. A fabrication service has not performed CAM review and no board has been manufactured.
+
+Proposed stack: four copper layers, 1.6 mm FR4, 1 oz outer copper, ENIG, lead-free assembly. F.Cu/B.Cu carry routing; In1.Cu is GND; In2.Cu is 3.3 V. Require the fabricator to confirm its actual stack, dielectric, copper weight and annular-ring process. There are no controlled-impedance RF feed traces: the module has an integrated antenna. Minimum declared clearance/track 0.15 mm; typical signal tracks 0.20 mm, power trunks 1.5 mm; vias 0.6/0.3 mm. Mounting holes are 3.2 mm NPTH. Check copper-edge clearance, antenna notch dimensions and soldermask registration in CAM.
+
+`gerbers/` contains all four copper, both mask/paste/silk layers and outline. `drill/` separates PTH and NPTH, with SVG drill maps. `assembly/smd-positions.csv` is a KiCad SMD placement export in mm; confirm rotation/origin against the assembly drawing before upload to JLCPCB or PCBWay. Through-hole connectors and header are hand or selective-solder assembly. Test pads and mounting holes are not purchased components. The BOM is `../bom/pcb-bom.csv`; buying substitutions requires electrical, package and DC-bias review.
+
+The WSON exposed pad must be soldered with controlled paste coverage. Review the manufacturer's stencil aperture and thermal-via requirements; the footprint includes paste apertures and ground copper. Do not interpret successful DRC as acceptable regulator loop placement, thermal performance, surge immunity or production qualification. Independently review the buck/boost high-frequency current loops and test a current-limited prototype before ordering a batch.

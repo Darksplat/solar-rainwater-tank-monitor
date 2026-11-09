@@ -1,4 +1,4 @@
-name: Validate prototype
+name: Validate engineering prototype
 on: [push, pull_request, workflow_dispatch]
 jobs:
   calculations:
@@ -7,8 +7,15 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: '3.13'}
+      - run: pip install -r requirements-tests.txt
+      - run: python tools/validate_circuit.py
+      - run: python tools/validate_manufacturing.py --verify-evidence
+      - run: python tests/integration/ha_templates_test.py
       - run: python -m unittest discover -s tests/unit -v
+      - run: g++ -std=c++17 -Wall -Wextra -Werror tests/hardware-simulation/kingspan_scenarios.cpp -o /tmp/kingspan && /tmp/kingspan
       - run: g++ -std=c++17 -Wall -Wextra -Werror tests/integration/core_test.cpp -o /tmp/core && /tmp/core
+      - run: g++ -std=c++17 -Wall -Wextra -Werror tests/integration/battery_test.cpp -o /tmp/battery && /tmp/battery
+      - run: g++ -std=c++17 -Wall -Wextra -Werror -Itests/stubs tests/integration/ina228_fault_test.cpp firmware/components/tank_ina228/tank_ina228.cpp -o /tmp/ina228 && /tmp/ina228
   firmware:
     runs-on: ubuntu-latest
     strategy:

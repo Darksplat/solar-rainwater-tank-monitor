@@ -1,0 +1,1352 @@
+{
+  "revision": "0.2-dev",
+  "parts": [
+    {
+      "ref": "J1",
+      "lib": "Connector_Generic:Conn_01x02",
+      "value": "BATTERY FUSED 5A",
+      "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+      "nets": {
+        "1": "BAT_RAW",
+        "2": "GND"
+      },
+      "section": "connections",
+      "mpn": "Phoenix 1715721",
+      "datasheet": "https://www.phoenixcontact.com/en-pc/products/pcb-terminal-block-mkds-15-2-508-1715721"
+    },
+    {
+      "ref": "J2",
+      "lib": "Connector_Generic:Conn_01x02",
+      "value": "CHARGER BAT",
+      "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+      "nets": {
+        "1": "CHARGER_BAT",
+        "2": "GND"
+      },
+      "section": "connections",
+      "mpn": "Phoenix 1715721",
+      "datasheet": "https://www.phoenixcontact.com/en-pc/products/pcb-terminal-block-mkds-15-2-508-1715721"
+    },
+    {
+      "ref": "J3",
+      "lib": "Connector_Generic:Conn_01x02",
+      "value": "PROTECTED LOAD",
+      "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+      "nets": {
+        "1": "LOAD_IN",
+        "2": "GND"
+      },
+      "section": "connections",
+      "mpn": "Phoenix 1715721",
+      "datasheet": "https://www.phoenixcontact.com/en-pc/products/pcb-terminal-block-mkds-15-2-508-1715721"
+    },
+    {
+      "ref": "J4",
+      "lib": "Connector_Generic:Conn_01x02",
+      "value": "PV INPUT",
+      "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+      "nets": {
+        "1": "PV_RAW",
+        "2": "PV_NEG"
+      },
+      "section": "connections",
+      "mpn": "Phoenix 1715721",
+      "datasheet": "https://www.phoenixcontact.com/en-pc/products/pcb-terminal-block-mkds-15-2-508-1715721"
+    },
+    {
+      "ref": "J5",
+      "lib": "Connector_Generic:Conn_01x02",
+      "value": "CHARGER PV",
+      "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+      "nets": {
+        "1": "PV_OUT",
+        "2": "PV_NEG"
+      },
+      "section": "connections",
+      "mpn": "Phoenix 1715721",
+      "datasheet": "https://www.phoenixcontact.com/en-pc/products/pcb-terminal-block-mkds-15-2-508-1715721"
+    },
+    {
+      "ref": "J6",
+      "lib": "Connector_Generic:Conn_01x02",
+      "value": "PRESSURE LOOP",
+      "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+      "nets": {
+        "1": "LOOP_P",
+        "2": "GND"
+      },
+      "section": "connections",
+      "mpn": "Phoenix 1715721",
+      "datasheet": "https://www.phoenixcontact.com/en-pc/products/pcb-terminal-block-mkds-15-2-508-1715721"
+    },
+    {
+      "ref": "U7",
+      "lib": "Power_Management:LTC4365TS8",
+      "value": "LTC4365ITS8#TRMPBF",
+      "footprint": "Package_TO_SOT_SMD:TSOT-23-8",
+      "nets": {
+        "1": "BAT_RAW",
+        "2": "REV_UV",
+        "3": "REV_OV",
+        "4": "GND",
+        "5": "REV_SHDN",
+        "6": "REV_FAULT",
+        "7": "BAT_FUSED",
+        "8": "REV_GATE"
+      },
+      "section": "reverse",
+      "mpn": "LTC4365ITS8#TRMPBF",
+      "datasheet": "https://www.analog.com/media/en/technical-documentation/data-sheets/4365fa.pdf"
+    },
+    {
+      "ref": "Q2",
+      "lib": "Transistor_FET:Q_NMOS_GDS",
+      "value": "IPD50N06S4L-12",
+      "footprint": "Package_TO_SOT_SMD:TO-252-2",
+      "nets": {
+        "1": "REV_GATE",
+        "2": "BAT_RAW",
+        "3": "REV_SOURCE"
+      },
+      "section": "reverse",
+      "mpn": "IPD50N06S4L12ATMA2",
+      "datasheet": "https://www.infineon.com/part/IPD50N06S4L-12"
+    },
+    {
+      "ref": "Q3",
+      "lib": "Transistor_FET:Q_NMOS_GDS",
+      "value": "IPD50N06S4L-12",
+      "footprint": "Package_TO_SOT_SMD:TO-252-2",
+      "nets": {
+        "1": "REV_GATE",
+        "2": "BAT_FUSED",
+        "3": "REV_SOURCE"
+      },
+      "section": "reverse",
+      "mpn": "IPD50N06S4L12ATMA2",
+      "datasheet": "https://www.infineon.com/part/IPD50N06S4L-12"
+    },
+    {
+      "ref": "R60",
+      "lib": "Device:R",
+      "value": "2.74M",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "BAT_RAW",
+        "2": "REV_UV"
+      },
+      "section": "reverse",
+      "mpn": "RC0603FR-072M74L",
+      "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-072M74L"
+    },
+    {
+      "ref": "R61",
+      "lib": "Device:R",
+      "value": "215k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "REV_UV",
+        "2": "REV_OV"
+      },
+      "section": "reverse",
+      "mpn": "RC0603FR-07215KL",
+      "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-07215KL"
+    },
+    {
+      "ref": "R62",
+      "lib": "Device:R",
+      "value": "84.5k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "REV_OV",
+        "2": "GND"
+      },
+      "section": "reverse",
+      "mpn": "RC0603FR-0784K5L",
+      "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0784K5L"
+    },
+    {
+      "ref": "R63",
+      "lib": "Device:R",
+      "value": "510k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "BAT_RAW",
+        "2": "REV_SHDN"
+      },
+      "section": "reverse",
+      "mpn": "RC0603FR-07510KL",
+      "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-07510KL"
+    },
+    {
+      "ref": "R64",
+      "lib": "Device:R",
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "V3V3",
+        "2": "REV_FAULT"
+      },
+      "section": "controller",
+      "mpn": "RC0603FR-0710KL",
+      "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL"
+    },
+    {
+      "ref": "D9",
+      "lib": "Device:D",
+      "value": "1N5408",
+      "footprint": "TankMonitor:1N5408_DO201AD_P20.32",
+      "nets": {
+        "1": "PV_IN",
+        "2": "PV_RAW"
+      },
+      "section": "pv",
+      "mpn": "1N5408-E3/54",
+      "datasheet": "https://www.vishay.com/docs/88516/1n5400.pdf"
+    },
+    {
+      "ref": "Q4",
+      "lib": "Transistor_BJT:Q_NPN_BEC",
+      "value": "BC847B-7-F",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "nets": {
+        "1": "RAW_BASE",
+        "2": "GND",
+        "3": "RAW_PRESENT"
+      },
+      "section": "reverse",
+      "mpn": "BC847B-7-F",
+      "datasheet": "https://www.diodes.com/datasheet/download/BC847B.pdf"
+    },
+    {
+      "ref": "R65",
+      "lib": "Device:R",
+      "value": "100k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "BAT_RAW",
+        "2": "RAW_BASE"
+      },
+      "section": "reverse",
+      "mpn": "RC0603FR-07100KL",
+      "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-07100KL"
+    },
+    {
+      "ref": "R66",
+      "lib": "Device:R",
+      "value": "100k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "V3V3",
+        "2": "RAW_PRESENT"
+      },
+      "section": "controller",
+      "mpn": "RC0603FR-07100KL",
+      "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-07100KL"
+    },
+    {
+      "ref": "R67",
+      "lib": "Device:R",
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "RAW_BASE",
+        "2": "GND"
+      },
+      "section": "reverse",
+      "mpn": "RC0603FR-0710KL",
+      "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL"
+    },
+    {
+      "ref": "D10",
+      "lib": "Device:D",
+      "value": "1N4148W-7-F",
+      "footprint": "Diode_SMD:D_SOD-123",
+      "nets": {
+        "1": "RAW_BASE",
+        "2": "GND"
+      },
+      "section": "reverse",
+      "mpn": "1N4148W-7-F",
+      "datasheet": "https://www.diodes.com/datasheet/download/1N4148W.pdf"
+    },
+    {
+      "ref": "R1",
+      "lib": "Device:R",
+      "value": "0.01R 1% 1W",
+      "footprint": "Resistor_SMD:R_2512_6332Metric",
+      "nets": {
+        "1": "BAT_FUSED",
+        "2": "CHARGER_BAT"
+      },
+      "section": "battery",
+      "mpn": "WSL2512R0100FEA",
+      "datasheet": ""
+    },
+    {
+      "ref": "R2",
+      "lib": "Device:R",
+      "value": "0.02R 1% 1W",
+      "footprint": "Resistor_SMD:R_2512_6332Metric",
+      "nets": {
+        "1": "PV_IN",
+        "2": "PV_OUT"
+      },
+      "section": "pv",
+      "mpn": "WSL2512R0200FEA",
+      "datasheet": ""
+    },
+    {
+      "ref": "D1",
+      "lib": "Device:D_Schottky",
+      "value": "B360A-13-F",
+      "footprint": "Diode_SMD:D_SMA",
+      "nets": {
+        "1": "VIN",
+        "2": "LOAD_IN"
+      },
+      "section": "buck",
+      "mpn": "B360A-13-F",
+      "datasheet": "https://www.diodes.com/datasheet/download/B360A.pdf"
+    },
+    {
+      "ref": "D2",
+      "lib": "Device:D_Zener",
+      "value": "SMBJ15A",
+      "footprint": "Diode_SMD:D_SMB",
+      "nets": {
+        "1": "VIN",
+        "2": "GND"
+      },
+      "section": "buck",
+      "mpn": "SMBJ15A",
+      "datasheet": "https://www.littelfuse.com/assetdocs/littelfuse-tvs-diode-smbj-datasheet?assetguid=18cc865c-d88b-4e4c-a33f-6c1c0f621906"
+    },
+    {
+      "ref": "U1",
+      "lib": "Regulator_Switching:AP63203WU",
+      "value": "AP63203WU-7",
+      "footprint": "Package_TO_SOT_SMD:TSOT-23-6",
+      "nets": {
+        "1": "V3V3",
+        "2": "EN_BUCK",
+        "3": "VIN",
+        "4": "GND",
+        "5": "SW_BUCK",
+        "6": "BST"
+      },
+      "section": "buck",
+      "mpn": "AP63203WU-7",
+      "datasheet": "https://www.diodes.com/datasheet/download/AP63200-AP63201-AP63203-AP63205.pdf"
+    },
+    {
+      "ref": "R3",
+      "lib": "Device:R",
+      "value": "100k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "VIN",
+        "2": "EN_BUCK"
+      },
+      "section": "buck",
+      "mpn": "RC0603FR-07100KL",
+      "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-07100KL"
+    },
+    {
+      "ref": "R4",
+      "lib": "Device:R",
+      "value": "100k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "EN_BUCK",
+        "2": "GND"
+      },
+      "section": "buck",
+      "mpn": "RC0603FR-07100KL",
+      "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-07100KL"
+    },
+    {
+      "ref": "C1",
+      "lib": "Device:C",
+      "value": "10u 50V X7R",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "nets": {
+        "1": "VIN",
+        "2": "GND"
+      },
+      "section": "buck",
+      "mpn": "C3225X7R1H106K250AC",
+      "datasheet": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C3225X7R1H106K250AC"
+    },
+    {
+      "ref": "C2",
+      "lib": "Device:C",
+      "value": "100n 50V",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "VIN",
+        "2": "GND"
+      },
+      "section": "buck",
+      "mpn": "C1608X7R1H104K080AA",
+      "datasheet": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1H104K080AA"
+    },
+    {
+      "ref": "C3",
+      "lib": "Device:C",
+      "value": "100n 16V",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "BST",
+        "2": "SW_BUCK"
+      },
+      "section": "buck",
+      "mpn": "C1608X7R1H104K080AA",
+      "datasheet": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1H104K080AA"
+    },
+    {
+      "ref": "L1",
+      "lib": "Device:L",
+      "value": "4.7uH Isat>=4A",
+      "footprint": "Inductor_SMD:L_Bourns_SRP5030T",
+      "nets": {
+        "1": "SW_BUCK",
+        "2": "V3V3"
+      },
+      "section": "buck",
+      "mpn": "SRP5030TA-4R7M",
+      "datasheet": "https://www.bourns.com/docs/product-datasheets/srp5030ta.pdf?sfvrsn=f08a91f1_28"
+    },
+    {
+      "ref": "C4",
+      "lib": "Device:C",
+      "value": "22u 16V X7R",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "nets": {
+        "1": "V3V3",
+        "2": "GND"
+      },
+      "section": "buck",
+      "mpn": "C3225X7R1C226M250AC",
+      "datasheet": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C3225X7R1C226M250AC"
+    },
+    {
+      "ref": "C5",
+      "lib": "Device:C",
+      "value": "22u 16V X7R",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "nets": {
+        "1": "V3V3",
+        "2": "GND"
+      },
+      "section": "buck",
+      "mpn": "C3225X7R1C226M250AC",
+      "datasheet": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C3225X7R1C226M250AC"
+    },
+    {
+      "ref": "Q1",
+      "lib": "TankMonitor:DMP2035U",
+      "value": "DMP2035U-7",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "nets": {
+        "1": "BOOST_GATE",
+        "2": "V3V3",
+        "3": "BOOST_IN"
+      },
+      "section": "boost",
+      "mpn": "DMP2035U-7",
+      "datasheet": "https://www.diodes.com/datasheet/download/DMP2035U.pdf"
+    },
+    {
+      "ref": "R5",
+      "lib": "Device:R",
+      "value": "100k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "BOOST_GATE",
+        "2": "V3V3"
+      },
+      "section": "boost",
+      "mpn": "RC0603FR-07100KL",
+      "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-07100KL"
+    },
+    {
+      "ref": "R6",
+      "lib": "Device:R",
+      "value": "1k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "LOOP_EN_N",
+        "2": "BOOST_GATE"
+      },
+      "section": "boost",
+      "mpn": "RC0603FR-071KL",
+      "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-071KL"
+    },
+    {
+      "ref": "U2",
+      "lib": "TankMonitor:TPS61170",
+      "value": "TPS61170DRVR",
+      "footprint": "Package_SON:WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm",
+      "nets": {
+        "1": "FB_BOOST",
+        "2": "COMP",
+        "3": "GND",
+        "4": "SW_BOOST",
+        "5": "BOOST_IN",
+        "6": "BOOST_IN",
+        "7": "GND"
+      },
+      "section": "boost",
+      "mpn": "TPS61170DRVR",
+      "datasheet": "https://www.ti.com/lit/ds/symlink/tps61170.pdf"
+    },
+    {
+      "ref": "C6",
+      "lib": "Device:C",
+      "value": "4.7u 16V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "nets": {
+        "1": "BOOST_IN",
+        "2": "GND"
+      },
+      "section": "boost",
+      "mpn": "C2012X7R1C475K125AB",
+      "datasheet": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1C475K125AB"
+    },
+    {
+      "ref": "L2",
+      "lib": "Device:L",
+      "value": "10uH Isat>=1.6A",
+      "footprint": "Inductor_SMD:L_Bourns_SRP5030T",
+      "nets": {
+        "1": "BOOST_IN",
+        "2": "SW_BOOST"
+      },
+      "section": "boost",
+      "mpn": "SRP5030TA-100M",
+      "datasheet": "https://www.bourns.com/docs/product-datasheets/srp5030ta.pdf?sfvrsn=f08a91f1_28"
+    },
+    {
+      "ref": "D3",
+      "lib": "Device:D_Schottky",
+      "value": "B360A-13-F",
+      "footprint": "Diode_SMD:D_SMA",
+      "nets": {
+        "1": "LOOP_SUPPLY",
+        "2": "SW_BOOST"
+      },
+      "section": "boost",
+      "mpn": "B360A-13-F",
+      "datasheet": "https://www.diodes.com/datasheet/download/B360A.pdf"
+    },
+    {
+      "ref": "C7",
+      "lib": "Device:C",
+      "value": "4.7u 50V X7R",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "nets": {
+        "1": "LOOP_SUPPLY",
+        "2": "GND"
+      },
+      "section": "boost",
+      "mpn": "C3225X7R1H475K250AB",
+      "datasheet": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C3225X7R1H475K250AB"
+    },
+    {
+      "ref": "R7",
+      "lib": "Device:R",
+      "value": "130k 0.1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "LOOP_SUPPLY",
+        "2": "FB_BOOST"
+      },
+      "section": "boost",
+      "mpn": "RT0603BRD07130KL",
+      "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RT0603BRD07130KL"
+    },
+    {
+      "ref": "R8",
+      "lib": "Device:R",
+      "value": "10k 0.1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "FB_BOOST",
+        "2": "GND"
+      },
+      "section": "boost",
+      "mpn": "RT0603BRD0710KL",
+      "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RT0603BRD0710KL"
+    },
+    {
+      "ref": "R9",
+      "lib": "Device:R",
+      "value": "4.99k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "COMP",
+        "2": "COMP_RC"
+      },
+      "section": "boost",
+      "mpn": "RC0603FR-074K99L",
+      "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-074K99L"
+    },
+    {
+      "ref": "C8",
+      "lib": "Device:C",
+      "value": "10n",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "COMP_RC",
+        "2": "GND"
+      },
+      "section": "boost",
+      "mpn": "C1608X7R1H103K080AA",
+      "datasheet": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1H103K080AA"
+    },
+    {
+      "ref": "R10",
+      "lib": "Device:R",
+      "value": "100k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "LOOP_SUPPLY",
+        "2": "GND"
+      },
+      "section": "boost",
+      "mpn": "RC0603FR-07100KL",
+      "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-07100KL"
+    },
+    {
+      "ref": "D4",
+      "lib": "Device:D_Zener",
+      "value": "SMBJ18A",
+      "footprint": "Diode_SMD:D_SMB",
+      "nets": {
+        "1": "LOOP_SUPPLY",
+        "2": "GND"
+      },
+      "section": "boost",
+      "mpn": "SMBJ18A",
+      "datasheet": ""
+    },
+    {
+      "ref": "R11",
+      "lib": "Device:R",
+      "value": "2R 0.1% 25ppm",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "nets": {
+        "1": "LOOP_SUPPLY",
+        "2": "LOOP_SHUNT_OUT"
+      },
+      "section": "loop",
+      "mpn": "RT1206BRD072RL",
+      "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RT1206BRD072RL"
+    },
+    {
+      "ref": "R12",
+      "lib": "Device:R",
+      "value": "110R 1.5W",
+      "footprint": "Resistor_SMD:R_2512_6332Metric",
+      "nets": {
+        "1": "LOOP_SHUNT_OUT",
+        "2": "LOOP_LIMIT_MID"
+      },
+      "section": "loop",
+      "mpn": "CRCW2512110RFKEGHP",
+      "datasheet": "https://www.vishay.com/docs/20115/crcwhp.pdf"
+    },
+    {
+      "ref": "R13",
+      "lib": "Device:R",
+      "value": "110R 1.5W",
+      "footprint": "Resistor_SMD:R_2512_6332Metric",
+      "nets": {
+        "1": "LOOP_LIMIT_MID",
+        "2": "LOOP_P"
+      },
+      "section": "loop",
+      "mpn": "CRCW2512110RFKEGHP",
+      "datasheet": "https://www.vishay.com/docs/20115/crcwhp.pdf"
+    },
+    {
+      "ref": "U3",
+      "lib": "Sensor_Energy:INA228",
+      "value": "INA228AIDGSR",
+      "footprint": "Package_SO:TSSOP-10_3x3mm_P0.5mm",
+      "nets": {
+        "1": "GND",
+        "2": "GND",
+        "3": null,
+        "4": "SDA",
+        "5": "SCL",
+        "6": "V3V3",
+        "7": "GND",
+        "8": "BAT_VBUS",
+        "9": "BAT_N",
+        "10": "BAT_P"
+      },
+      "section": "bat",
+      "mpn": "INA228AIDGSR",
+      "datasheet": "https://www.ti.com/lit/ds/symlink/ina228.pdf"
+    },
+    {
+      "ref": "R20",
+      "lib": "Device:R",
+      "value": "10R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "BAT_FUSED",
+        "2": "BAT_P"
+      },
+      "section": "bat",
+      "mpn": "RC0603FR-0710RL",
+      "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710RL"
+    },
+    {
+      "ref": "R21",
+      "lib": "Device:R",
+      "value": "10R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "CHARGER_BAT",
+        "2": "BAT_N"
+      },
+      "section": "bat",
+      "mpn": "RC0603FR-0710RL",
+      "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710RL"
+    },
+    {
+      "ref": "R22",
+      "lib": "Device:R",
+      "value": "10R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "BAT_FUSED",
+        "2": "BAT_VBUS"
+      },
+      "section": "bat",
+      "mpn": "RC0603FR-0710RL",
+      "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710RL"
+    },
+    {
+      "ref": "C20",
+      "lib": "Device:C",
+      "value": "100n 100V",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "nets": {
+        "1": "BAT_P",
+        "2": "BAT_N"
+      },
+      "section": "bat",
+      "mpn": "C2012X7R2A104K125AA",
+      "datasheet": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R2A104K125AA"
+    },
+    {
+      "ref": "C21",
+      "lib": "Device:C",
+      "value": "100n",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "V3V3",
+        "2": "GND"
+      },
+      "section": "bat",
+      "mpn": "C1608X7R1H104K080AA",
+      "datasheet": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1H104K080AA"
+    },
+    {
+      "ref": "U4",
+      "lib": "Sensor_Energy:INA228",
+      "value": "INA228AIDGSR",
+      "footprint": "Package_SO:TSSOP-10_3x3mm_P0.5mm",
+      "nets": {
+        "1": "GND",
+        "2": "V3V3",
+        "3": null,
+        "4": "SDA",
+        "5": "SCL",
+        "6": "V3V3",
+        "7": "GND",
+        "8": "PV_VBUS",
+        "9": "PV_N",
+        "10": "PV_P"
+      },
+      "section": "pv",
+      "mpn": "INA228AIDGSR",
+      "datasheet": "https://www.ti.com/lit/ds/symlink/ina228.pdf"
+    },
+    {
+      "ref": "R30",
+      "lib": "Device:R",
+      "value": "47R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "PV_IN",
+        "2": "PV_P"
+      },
+      "section": "pv",
+      "mpn": "RC0603FR-0747RL",
+      "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0747RL"
+    },
+    {
+      "ref": "R31",
+      "lib": "Device:R",
+      "value": "47R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "PV_OUT",
+        "2": "PV_N"
+      },
+      "section": "pv",
+      "mpn": "RC0603FR-0747RL",
+      "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0747RL"
+    },
+    {
+      "ref": "R32",
+      "lib": "Device:R",
+      "value": "47R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "PV_OUT",
+        "2": "PV_VBUS"
+      },
+      "section": "pv",
+      "mpn": "RC0603FR-0747RL",
+      "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0747RL"
+    },
+    {
+      "ref": "C30",
+      "lib": "Device:C",
+      "value": "100n 100V",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "nets": {
+        "1": "PV_P",
+        "2": "PV_N"
+      },
+      "section": "pv",
+      "mpn": "C2012X7R2A104K125AA",
+      "datasheet": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R2A104K125AA"
+    },
+    {
+      "ref": "C31",
+      "lib": "Device:C",
+      "value": "100n",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "V3V3",
+        "2": "GND"
+      },
+      "section": "pv",
+      "mpn": "C1608X7R1H104K080AA",
+      "datasheet": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1H104K080AA"
+    },
+    {
+      "ref": "D5",
+      "lib": "Device:D_Zener",
+      "value": "SMBJ51A",
+      "footprint": "Diode_SMD:D_SMB",
+      "nets": {
+        "1": "PV_P",
+        "2": "GND"
+      },
+      "section": "pv",
+      "mpn": "SMBJ51A",
+      "datasheet": ""
+    },
+    {
+      "ref": "D6",
+      "lib": "Device:D_Zener",
+      "value": "SMBJ51A",
+      "footprint": "Diode_SMD:D_SMB",
+      "nets": {
+        "1": "PV_N",
+        "2": "GND"
+      },
+      "section": "pv",
+      "mpn": "SMBJ51A",
+      "datasheet": ""
+    },
+    {
+      "ref": "D7",
+      "lib": "Device:D_Zener",
+      "value": "SMBJ51A",
+      "footprint": "Diode_SMD:D_SMB",
+      "nets": {
+        "1": "PV_VBUS",
+        "2": "GND"
+      },
+      "section": "pv",
+      "mpn": "SMBJ51A",
+      "datasheet": ""
+    },
+    {
+      "ref": "U5",
+      "lib": "Sensor_Energy:INA228",
+      "value": "INA228AIDGSR",
+      "footprint": "Package_SO:TSSOP-10_3x3mm_P0.5mm",
+      "nets": {
+        "1": "GND",
+        "2": "SDA",
+        "3": null,
+        "4": "SDA",
+        "5": "SCL",
+        "6": "V3V3",
+        "7": "GND",
+        "8": "LOOP_VBUS",
+        "9": "LOOP_N",
+        "10": "LOOP_P"
+      },
+      "section": "loop",
+      "mpn": "INA228AIDGSR",
+      "datasheet": "https://www.ti.com/lit/ds/symlink/ina228.pdf"
+    },
+    {
+      "ref": "R40",
+      "lib": "Device:R",
+      "value": "10R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "LOOP_SUPPLY",
+        "2": "LOOP_P"
+      },
+      "section": "loop",
+      "mpn": "RC0603FR-0710RL",
+      "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710RL"
+    },
+    {
+      "ref": "R41",
+      "lib": "Device:R",
+      "value": "10R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "LOOP_SHUNT_OUT",
+        "2": "LOOP_N"
+      },
+      "section": "loop",
+      "mpn": "RC0603FR-0710RL",
+      "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710RL"
+    },
+    {
+      "ref": "R42",
+      "lib": "Device:R",
+      "value": "10R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "LOOP_P",
+        "2": "LOOP_VBUS"
+      },
+      "section": "loop",
+      "mpn": "RC0603FR-0710RL",
+      "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710RL"
+    },
+    {
+      "ref": "C40",
+      "lib": "Device:C",
+      "value": "100n 100V",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "nets": {
+        "1": "LOOP_P",
+        "2": "LOOP_N"
+      },
+      "section": "loop",
+      "mpn": "C2012X7R2A104K125AA",
+      "datasheet": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R2A104K125AA"
+    },
+    {
+      "ref": "C41",
+      "lib": "Device:C",
+      "value": "100n",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "V3V3",
+        "2": "GND"
+      },
+      "section": "loop",
+      "mpn": "C1608X7R1H104K080AA",
+      "datasheet": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1H104K080AA"
+    },
+    {
+      "ref": "U6",
+      "lib": "RF_Module:ESP32-C6-MINI-1",
+      "value": "ESP32-C6-MINI-1-N4",
+      "footprint": "TankMonitor:ESP32-C6-MINI-1-edge-silk",
+      "nets": {
+        "1": "GND",
+        "2": "GND",
+        "3": "V3V3",
+        "4": null,
+        "5": null,
+        "6": null,
+        "7": null,
+        "8": "EN",
+        "9": "LOOP_EN_N",
+        "10": null,
+        "11": "GND",
+        "12": null,
+        "13": null,
+        "14": "GND",
+        "15": "SDA",
+        "16": "SCL",
+        "17": null,
+        "18": null,
+        "19": null,
+        "20": null,
+        "21": null,
+        "22": "STRAP8",
+        "23": "BOOT",
+        "24": "LED_K",
+        "25": "REV_FAULT",
+        "26": "RAW_PRESENT",
+        "27": null,
+        "28": null,
+        "29": null,
+        "30": "RXD",
+        "31": "TXD",
+        "32": null,
+        "33": null,
+        "34": null,
+        "35": null,
+        "36": "GND",
+        "37": "GND",
+        "38": "GND",
+        "39": "GND",
+        "40": "GND",
+        "41": "GND",
+        "42": "GND",
+        "43": "GND",
+        "44": "GND",
+        "45": "GND",
+        "46": "GND",
+        "47": "GND",
+        "48": "GND",
+        "49": "GND",
+        "50": "GND",
+        "51": "GND",
+        "52": "GND",
+        "53": "GND"
+      },
+      "section": "controller",
+      "mpn": "ESP32-C6-MINI-1-N4",
+      "datasheet": "https://www.espressif.com/sites/default/files/documentation/esp32-c6-mini-1_mini-1u_datasheet_en.pdf"
+    },
+    {
+      "ref": "R50",
+      "lib": "Device:R",
+      "value": "4.7k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "V3V3",
+        "2": "SDA"
+      },
+      "section": "controller",
+      "mpn": "RC0603FR-074K7L",
+      "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-074K7L"
+    },
+    {
+      "ref": "R51",
+      "lib": "Device:R",
+      "value": "4.7k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "V3V3",
+        "2": "SCL"
+      },
+      "section": "controller",
+      "mpn": "RC0603FR-074K7L",
+      "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-074K7L"
+    },
+    {
+      "ref": "R52",
+      "lib": "Device:R",
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "V3V3",
+        "2": "EN"
+      },
+      "section": "controller",
+      "mpn": "RC0603FR-0710KL",
+      "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL"
+    },
+    {
+      "ref": "C50",
+      "lib": "Device:C",
+      "value": "1u",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "EN",
+        "2": "GND"
+      },
+      "section": "controller",
+      "mpn": "C1608X7R1C105K080AC",
+      "datasheet": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1C105K080AC"
+    },
+    {
+      "ref": "R53",
+      "lib": "Device:R",
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "V3V3",
+        "2": "BOOT"
+      },
+      "section": "controller",
+      "mpn": "RC0603FR-0710KL",
+      "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL"
+    },
+    {
+      "ref": "R54",
+      "lib": "Device:R",
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "V3V3",
+        "2": "STRAP8"
+      },
+      "section": "controller",
+      "mpn": "RC0603FR-0710KL",
+      "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL"
+    },
+    {
+      "ref": "C51",
+      "lib": "Device:C",
+      "value": "10u 35V X5R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "nets": {
+        "1": "V3V3",
+        "2": "GND"
+      },
+      "section": "controller",
+      "mpn": "C2012X5R1V106K085AC",
+      "datasheet": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X5R1V106K085AC"
+    },
+    {
+      "ref": "C52",
+      "lib": "Device:C",
+      "value": "100n",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "nets": {
+        "1": "V3V3",
+        "2": "GND"
+      },
+      "section": "controller",
+      "mpn": "C1608X7R1H104K080AA",
+      "datasheet": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1H104K080AA"
+    },
+    {
+      "ref": "SW1",
+      "lib": "Switch:SW_Push",
+      "value": "RESET",
+      "footprint": "Button_Switch_SMD:SW_SPST_TL3342",
+      "nets": {
+        "1": "EN",
+        "2": "GND"
+      },
+      "section": "controller",
+      "mpn": "TL3342F160QG-TR",
+      "datasheet": ""
+    },
+    {
+      "ref": "SW2",
+      "lib": "Switch:SW_Push",
+      "value": "BOOT",
+      "footprint": "Button_Switch_SMD:SW_SPST_TL3342",
+      "nets": {
+        "1": "BOOT",
+        "2": "GND"
+      },
+      "section": "controller",
+      "mpn": "TL3342F160QG-TR",
+      "datasheet": ""
+    },
+    {
+      "ref": "J7",
+      "lib": "Connector_Generic:Conn_01x06",
+      "value": "UART 3.3V ONLY",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical",
+      "nets": {
+        "1": "GND",
+        "2": "V3V3",
+        "3": "TXD",
+        "4": "RXD",
+        "5": "BOOT",
+        "6": "EN"
+      },
+      "section": "controller",
+      "mpn": "TSW-106-07-G-S",
+      "datasheet": "https://www.samtec.com/products/tsw-106-07-g-s"
+    },
+    {
+      "ref": "D8",
+      "lib": "Device:LED",
+      "value": "STATUS",
+      "footprint": "LED_SMD:LED_0603_1608Metric",
+      "nets": {
+        "1": "LED_K",
+        "2": "LED_A"
+      },
+      "section": "controller",
+      "mpn": "LTST-C190KGKT",
+      "datasheet": ""
+    },
+    {
+      "ref": "R55",
+      "lib": "Device:R",
+      "value": "2.2k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "nets": {
+        "1": "V3V3",
+        "2": "LED_A"
+      },
+      "section": "controller",
+      "mpn": "RC0603FR-072K2L",
+      "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-072K2L"
+    },
+    {
+      "ref": "TP1",
+      "lib": "Connector:TestPoint",
+      "value": "GND",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "GND"
+      },
+      "section": "test",
+      "mpn": "",
+      "datasheet": ""
+    },
+    {
+      "ref": "TP2",
+      "lib": "Connector:TestPoint",
+      "value": "V3V3",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "V3V3"
+      },
+      "section": "test",
+      "mpn": "",
+      "datasheet": ""
+    },
+    {
+      "ref": "TP3",
+      "lib": "Connector:TestPoint",
+      "value": "VIN",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "VIN"
+      },
+      "section": "test",
+      "mpn": "",
+      "datasheet": ""
+    },
+    {
+      "ref": "TP4",
+      "lib": "Connector:TestPoint",
+      "value": "LOOP_SUPPLY",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "LOOP_SUPPLY"
+      },
+      "section": "test",
+      "mpn": "",
+      "datasheet": ""
+    },
+    {
+      "ref": "TP5",
+      "lib": "Connector:TestPoint",
+      "value": "LOOP_P",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "LOOP_P"
+      },
+      "section": "test",
+      "mpn": "",
+      "datasheet": ""
+    },
+    {
+      "ref": "TP6",
+      "lib": "Connector:TestPoint",
+      "value": "SDA",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "SDA"
+      },
+      "section": "test",
+      "mpn": "",
+      "datasheet": ""
+    },
+    {
+      "ref": "TP7",
+      "lib": "Connector:TestPoint",
+      "value": "SCL",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "SCL"
+      },
+      "section": "test",
+      "mpn": "",
+      "datasheet": ""
+    },
+    {
+      "ref": "TP8",
+      "lib": "Connector:TestPoint",
+      "value": "BAT_FUSED",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "BAT_FUSED"
+      },
+      "section": "test",
+      "mpn": "",
+      "datasheet": ""
+    },
+    {
+      "ref": "TP9",
+      "lib": "Connector:TestPoint",
+      "value": "CHARGER_BAT",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "CHARGER_BAT"
+      },
+      "section": "test",
+      "mpn": "",
+      "datasheet": ""
+    },
+    {
+      "ref": "TP10",
+      "lib": "Connector:TestPoint",
+      "value": "PV_IN",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "PV_IN"
+      },
+      "section": "test",
+      "mpn": "",
+      "datasheet": ""
+    },
+    {
+      "ref": "TP11",
+      "lib": "Connector:TestPoint",
+      "value": "PV_OUT",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "PV_OUT"
+      },
+      "section": "test",
+      "mpn": "",
+      "datasheet": ""
+    },
+    {
+      "ref": "TP12",
+      "lib": "Connector:TestPoint",
+      "value": "LOOP_EN_N",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "nets": {
+        "1": "LOOP_EN_N"
+      },
+      "section": "test",
+      "mpn": "",
+      "datasheet": ""
+    }
+  ]
+}

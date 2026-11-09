@@ -1,0 +1,1 @@
+PASS: coulomb SOC, verified-full guard, 1Ah discharge, gaps, resets, capacity changes and timer wrap

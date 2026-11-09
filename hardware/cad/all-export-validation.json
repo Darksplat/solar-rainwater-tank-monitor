@@ -1,0 +1,351 @@
+{
+  "date": "2026-11-09",
+  "documents": {
+    "TankMonitorAssembly.FCStd": {
+      "valid_shape_objects": 16
+    },
+    "SolarPostMount.FCStd": {
+      "valid_shape_objects": 12
+    },
+    "TankMonitorExploded.FCStd": {
+      "valid_shape_objects": 13
+    },
+    "TankMonitorMechanical.FCStd": {
+      "valid_shape_objects": 37
+    }
+  },
+  "STEP": {
+    "Standoff3.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 370.67651719705964
+    },
+    "PanelReference1.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 3850000.0000340836
+    },
+    "SupportArm1.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 225000.0
+    },
+    "BatteryStrap1.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 19999.999999999978
+    },
+    "PostReference.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 2494927.2217748687
+    },
+    "PCBSpacer4.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 202.31856689118172
+    },
+    "BatteryTerminalServiceKeepout.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 384625.0
+    },
+    "ChargerReference.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 451999.99999999994
+    },
+    "CageSuspension1.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 89161.90261289451
+    },
+    "RoutedPCB.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 21371.284569233834
+    },
+    "MountCabinetReference.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 25200000.0
+    },
+    "PoleBandReference1.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18456.856839840097
+    },
+    "Standoff2.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 370.67651719705964
+    },
+    "BatteryProtectReference.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 203520.0
+    },
+    "CabinetReference.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 2014500.0
+    },
+    "ServiceBackplate.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 341874.6000446137
+    },
+    "PCBSpacer3.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 202.31856689118308
+    },
+    "PCBEnvelope.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 7680.0
+    },
+    "BatteryReference.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 2327479.0
+    },
+    "BatteryShelf.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 55666.04207607776
+    },
+    "RackSpine2.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 59849.99999709742
+    },
+    "PCBSpacer2.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 202.31856689118172
+    },
+    "SolarRail1.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 157319.9999981722
+    },
+    "PCBSpacer1.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 202.31856689118302
+    },
+    "SolarRail2.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 157319.99998519314
+    },
+    "RackSpine1.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 59849.99999709742
+    },
+    "SolarPostMount.step": {
+      "valid": true,
+      "solids": 12,
+      "volume_mm3": 36316180.93556839
+    },
+    "AntennaMetalKeepout.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 114000.0
+    },
+    "PoleBandReference2.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 18456.856839840097
+    },
+    "Standoff1.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 370.67651719705975
+    },
+    "TrayMountHole3.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 64617.53629867949
+    },
+    "CableDuctEnvelope.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 111600.0
+    },
+    "PanelReference2.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 3850000.0000340836
+    },
+    "SupportArm2.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 225000.0
+    },
+    "TankMonitorAssembly.step": {
+      "valid": true,
+      "solids": 13,
+      "volume_mm3": 5457220.200957487
+    },
+    "BatteryStrap2.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 19999.999999999978
+    },
+    "TankMonitorExploded.step": {
+      "valid": true,
+      "solids": 13,
+      "volume_mm3": 5457220.200957489
+    },
+    "Standoff0.step": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 370.6765171970597
+    }
+  },
+  "STL": {
+    "CableDuctEnvelope.stl": {
+      "closed": true,
+      "facets": 12
+    },
+    "CageSuspension1.stl": {
+      "closed": true,
+      "facets": 1596
+    },
+    "PoleBandReference2.stl": {
+      "closed": true,
+      "facets": 1008
+    },
+    "PoleBandReference1.stl": {
+      "closed": true,
+      "facets": 1008
+    },
+    "BatteryReference.stl": {
+      "closed": true,
+      "facets": 12
+    },
+    "PanelReference1.stl": {
+      "closed": true,
+      "facets": 12
+    },
+    "PCBSpacer4.stl": {
+      "closed": true,
+      "facets": 1008
+    },
+    "PanelReference2.stl": {
+      "closed": true,
+      "facets": 12
+    },
+    "BatteryTerminalServiceKeepout.stl": {
+      "closed": true,
+      "facets": 12
+    },
+    "PCBSpacer3.stl": {
+      "closed": true,
+      "facets": 1008
+    },
+    "BatteryProtectReference.stl": {
+      "closed": true,
+      "facets": 12
+    },
+    "BatteryStrap2.stl": {
+      "closed": true,
+      "facets": 32
+    },
+    "PCBSpacer2.stl": {
+      "closed": true,
+      "facets": 1008
+    },
+    "RoutedPCB.stl": {
+      "closed": true,
+      "facets": 12220
+    },
+    "PostReference.stl": {
+      "closed": true,
+      "facets": 1008
+    },
+    "AntennaMetalKeepout.stl": {
+      "closed": true,
+      "facets": 12
+    },
+    "PCBEnvelope.stl": {
+      "closed": true,
+      "facets": 12
+    },
+    "BatteryStrap1.stl": {
+      "closed": true,
+      "facets": 32
+    },
+    "PCBSpacer1.stl": {
+      "closed": true,
+      "facets": 1008
+    },
+    "Standoff1.stl": {
+      "closed": true,
+      "facets": 1008
+    },
+    "Standoff0.stl": {
+      "closed": true,
+      "facets": 1008
+    },
+    "RackSpine1.stl": {
+      "closed": true,
+      "facets": 28
+    },
+    "Standoff2.stl": {
+      "closed": true,
+      "facets": 1008
+    },
+    "Standoff3.stl": {
+      "closed": true,
+      "facets": 1008
+    },
+    "RackSpine2.stl": {
+      "closed": true,
+      "facets": 28
+    },
+    "SolarRail1.stl": {
+      "closed": true,
+      "facets": 28
+    },
+    "ChargerReference.stl": {
+      "closed": true,
+      "facets": 12
+    },
+    "TrayMountHole3.stl": {
+      "closed": true,
+      "facets": 2044
+    },
+    "SolarRail2.stl": {
+      "closed": true,
+      "facets": 28
+    },
+    "SupportArm1.stl": {
+      "closed": true,
+      "facets": 12
+    },
+    "MountCabinetReference.stl": {
+      "closed": true,
+      "facets": 12
+    },
+    "SupportArm2.stl": {
+      "closed": true,
+      "facets": 12
+    },
+    "BatteryShelf.stl": {
+      "closed": true,
+      "facets": 2084
+    },
+    "CabinetReference.stl": {
+      "closed": true,
+      "facets": 28
+    },
+    "ServiceBackplate.stl": {
+      "closed": true,
+      "facets": 4092
+    }
+  }
+}

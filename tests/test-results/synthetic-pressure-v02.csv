@@ -1,0 +1,16 @@
+scenario,reference_depth_m,current_ma,status,reported_depth_m,usable_litres
+synthetic_depth,0,4,below_probe_unresolved,nan,nan
+synthetic_depth,0.25,4.52208,ok,0.25,520
+synthetic_depth,0.5,5.17468,ok,0.5,1170
+synthetic_depth,1,6.47988,ok,1,2470
+synthetic_depth,1.5,7.78508,ok,1.5,3770
+synthetic_depth,2,9.09028,ok,2,5070
+synthetic_depth,2.5,10.3955,ok,2.5,6370
+synthetic_depth,3,11.7007,ok,3,7670
+synthetic_depth,3.5,13.0059,ok,3.5,8970
+synthetic_depth,3.85,13.9195,ok,3.85,9880
+injected_current_fault,nan,0,loop_low,nan,nan
+injected_current_fault,nan,3.5,loop_low,nan,nan
+injected_current_fault,nan,21.1,loop_high,nan,nan
+injected_current_fault,nan,24,loop_high,nan,nan
+injected_current_fault,nan,nan,adc_fault,nan,nan

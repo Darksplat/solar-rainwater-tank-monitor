@@ -1,0 +1,1 @@
+PASS: real INA228 driver, register decoding, every I2C read failure, reset, overflow, readiness, identity and recovery

@@ -5,3 +5,8 @@ firmware/secrets.yaml
 *.log
 .DS_Store
 **/secrets.yaml
+
+*.FCBak
+*.kicad_prl
+*.lck
+~*

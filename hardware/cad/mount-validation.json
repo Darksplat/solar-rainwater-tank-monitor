@@ -1,0 +1,67 @@
+{
+  "status": "packaging / mounting study only",
+  "parts": {
+    "PostReference": {
+      "valid": true,
+      "role": "114.3mm OD x4mm wall reference, footing and wind design required",
+      "volume_mm3": 2494927.2217748687
+    },
+    "PanelReference1": {
+      "valid": true,
+      "role": "SPM040201200 440x350x25 envelope; do not drill the panel frame without approval",
+      "volume_mm3": 3850000.000000001
+    },
+    "PanelReference2": {
+      "valid": true,
+      "role": "SPM040201200 440x350x25 envelope; do not drill the panel frame without approval",
+      "volume_mm3": 3850000.000000001
+    },
+    "SolarRail1": {
+      "valid": true,
+      "role": "30x30x3 aluminum angle, length920; clamp pattern awaits panel drawing",
+      "volume_mm3": 157320.00000000026
+    },
+    "SolarRail2": {
+      "valid": true,
+      "role": "30x30x3 aluminum angle, length920; clamp pattern awaits panel drawing",
+      "volume_mm3": 157320.00000000006
+    },
+    "RackSpine1": {
+      "valid": true,
+      "role": "30x30x3 angle; M8 connections require detailed bracket review",
+      "volume_mm3": 59850.000000000015
+    },
+    "RackSpine2": {
+      "valid": true,
+      "role": "30x30x3 angle; M8 connections require detailed bracket review",
+      "volume_mm3": 59850.000000000015
+    },
+    "SupportArm1": {
+      "valid": true,
+      "role": "Reference support arm: structural member and fixing sizes require site wind calculation",
+      "volume_mm3": 225000.0
+    },
+    "SupportArm2": {
+      "valid": true,
+      "role": "Reference support arm: structural member and fixing sizes require site wind calculation",
+      "volume_mm3": 225000.0
+    },
+    "MountCabinetReference": {
+      "valid": true,
+      "role": "Fibox cabinet reference; proprietary PMK ARCA30 polestrap kit attaches without tank drilling",
+      "volume_mm3": 25200000.0
+    },
+    "PoleBandReference1": {
+      "valid": true,
+      "role": "Band envelope only, use manufacturer PMK kit and its instructions",
+      "volume_mm3": 18456.856839840097
+    },
+    "PoleBandReference2": {
+      "valid": true,
+      "role": "Band envelope only, use manufacturer PMK kit and its instructions",
+      "volume_mm3": 18456.856839840097
+    }
+  },
+  "wind_load": "not calculated; site design dependency",
+  "footing": "not designed; soil and wind data required"
+}

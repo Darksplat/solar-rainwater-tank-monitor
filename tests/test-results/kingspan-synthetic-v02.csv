@@ -1,0 +1,9 @@
+scenario,reference_depth_m,loop_mA,status,calculated_depth_m,total_litres,usable_litres,percent
+synthetic_rounded_catalogue,0,4,6,nan,nan,nan,nan
+synthetic_rounded_catalogue,0.25,4.78312,0,0.25,1079.05,863.237,9.43395
+synthetic_rounded_catalogue,0.5,5.76202,0,0.5,2158.09,1942.28,21.2264
+synthetic_rounded_catalogue,1,7.71982,0,1,4316.19,4100.38,44.8113
+synthetic_rounded_catalogue,1.5,9.67762,0,1.5,6474.28,6258.47,68.3962
+synthetic_rounded_catalogue,2,11.6354,0,2,8632.38,8416.57,91.9811
+synthetic_rounded_catalogue,2.17,12.3011,0,2.17,9366.13,9150.32,100
+synthetic_rounded_catalogue,2.32,12.8884,7,nan,nan,nan,nan

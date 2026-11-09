@@ -1,0 +1,185 @@
+{
+  "date": "2026-11-09",
+  "parts": {
+    "RC0603FR-072M74L": {
+      "url": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-072M74L",
+      "http_status": 200,
+      "record_retrieved": true,
+      "content_type": "application/pdf",
+      "sha256": "dd27377e9a6b1fe9be23dba4b112608f42f3ccbf454b38c07b1f01c7e1d258b5",
+      "electrical_qualification": "not established by HTTP check",
+      "stock_and_price": "not checked"
+    },
+    "RC0603FR-07215KL": {
+      "url": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-07215KL",
+      "http_status": 200,
+      "record_retrieved": true,
+      "content_type": "application/pdf",
+      "sha256": "aa1f7e098d16ca2bcd2017a6452c066ab58bb5c4b2e4d55c7c5ff3a6a487639d",
+      "electrical_qualification": "not established by HTTP check",
+      "stock_and_price": "not checked"
+    },
+    "RC0603FR-0784K5L": {
+      "url": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0784K5L",
+      "http_status": 200,
+      "record_retrieved": true,
+      "content_type": "application/pdf",
+      "sha256": "e86f9e88125f5405b11ba355bdb1e6a203df1846ca654d05e0c7279660489ea4",
+      "electrical_qualification": "not established by HTTP check",
+      "stock_and_price": "not checked"
+    },
+    "RC0603FR-07510KL": {
+      "url": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-07510KL",
+      "http_status": 200,
+      "record_retrieved": true,
+      "content_type": "application/pdf",
+      "sha256": "e3f41c6c827200a8b30573bc4b3910be8b01649d346d41a4a9c77180920d63ba",
+      "electrical_qualification": "not established by HTTP check",
+      "stock_and_price": "not checked"
+    },
+    "RC0603FR-0710KL": {
+      "url": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710KL",
+      "http_status": 200,
+      "record_retrieved": true,
+      "content_type": "application/pdf",
+      "sha256": "48f8c8e6aba2c02953a331133c6fe6981afc0c3c3c118d6b83e62ff5a0364f43",
+      "electrical_qualification": "not established by HTTP check",
+      "stock_and_price": "not checked"
+    },
+    "RC0603FR-07100KL": {
+      "url": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-07100KL",
+      "http_status": 200,
+      "record_retrieved": true,
+      "content_type": "application/pdf",
+      "sha256": "804bbce92f141c0325e4b2692eeb9f1a2c0da6200b89190c3f2dcd75d24aec32",
+      "electrical_qualification": "not established by HTTP check",
+      "stock_and_price": "not checked"
+    },
+    "C3225X7R1H106K250AC": {
+      "url": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C3225X7R1H106K250AC",
+      "record_retrieved": false,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    "C1608X7R1H104K080AA": {
+      "url": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1H104K080AA",
+      "record_retrieved": false,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    "C3225X7R1C226M250AC": {
+      "url": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C3225X7R1C226M250AC",
+      "record_retrieved": false,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    "RC0603FR-071KL": {
+      "url": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-071KL",
+      "http_status": 200,
+      "record_retrieved": true,
+      "content_type": "application/pdf",
+      "sha256": "fe0b9afbf4d5e9284587669e0c9ed3d36173c5cb11c6acd0e92b05db5e834b28",
+      "electrical_qualification": "not established by HTTP check",
+      "stock_and_price": "not checked"
+    },
+    "C2012X7R1C475K125AB": {
+      "url": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1C475K125AB",
+      "record_retrieved": false,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    "C3225X7R1H475K250AB": {
+      "url": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C3225X7R1H475K250AB",
+      "record_retrieved": false,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    "RT0603BRD07130KL": {
+      "url": "https://www.yageogroup.com/component-documentation/download/specsheet/RT0603BRD07130KL",
+      "http_status": 200,
+      "record_retrieved": true,
+      "content_type": "application/pdf",
+      "sha256": "6525bc407fec6232d4ca1cadab5c24b88c05ba4ebab0cef6f487cd06b65c96d2",
+      "electrical_qualification": "not established by HTTP check",
+      "stock_and_price": "not checked"
+    },
+    "RT0603BRD0710KL": {
+      "url": "https://www.yageogroup.com/component-documentation/download/specsheet/RT0603BRD0710KL",
+      "http_status": 200,
+      "record_retrieved": true,
+      "content_type": "application/pdf",
+      "sha256": "bf302d0b4d0df5d345d9d65a83aee6c2f3e4a6859c939d87bed031370e16e279",
+      "electrical_qualification": "not established by HTTP check",
+      "stock_and_price": "not checked"
+    },
+    "RC0603FR-074K99L": {
+      "url": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-074K99L",
+      "http_status": 200,
+      "record_retrieved": true,
+      "content_type": "application/pdf",
+      "sha256": "791b5e7b71fc5225a757f50a6a84d7b87a01fba1154881c6cdbee96ea471f260",
+      "electrical_qualification": "not established by HTTP check",
+      "stock_and_price": "not checked"
+    },
+    "C1608X7R1H103K080AA": {
+      "url": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1H103K080AA",
+      "record_retrieved": false,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    "RT1206BRD072RL": {
+      "url": "https://www.yageogroup.com/component-documentation/download/specsheet/RT1206BRD072RL",
+      "http_status": 200,
+      "record_retrieved": true,
+      "content_type": "application/pdf",
+      "sha256": "6407ca5544491914402333bcc48d7faf4cdc0b9628de1b0160606abe415956d9",
+      "electrical_qualification": "not established by HTTP check",
+      "stock_and_price": "not checked"
+    },
+    "RC0603FR-0710RL": {
+      "url": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0710RL",
+      "http_status": 200,
+      "record_retrieved": true,
+      "content_type": "application/pdf",
+      "sha256": "26c2032204f6e606be109819dd604d1515a603d9575d3f8fd488afa083981e9b",
+      "electrical_qualification": "not established by HTTP check",
+      "stock_and_price": "not checked"
+    },
+    "C2012X7R2A104K125AA": {
+      "url": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R2A104K125AA",
+      "record_retrieved": false,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    "RC0603FR-0747RL": {
+      "url": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-0747RL",
+      "http_status": 200,
+      "record_retrieved": true,
+      "content_type": "application/pdf",
+      "sha256": "9879220a864685bbded0f12fc78d351a8e119d16f72e32ab0fd810db572b46b7",
+      "electrical_qualification": "not established by HTTP check",
+      "stock_and_price": "not checked"
+    },
+    "RC0603FR-074K7L": {
+      "url": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-074K7L",
+      "http_status": 200,
+      "record_retrieved": true,
+      "content_type": "application/pdf",
+      "sha256": "f51090c022cdf2acf5d47f4b0273b1fc4074caf6f4f9ec752f111c212c246f51",
+      "electrical_qualification": "not established by HTTP check",
+      "stock_and_price": "not checked"
+    },
+    "C1608X7R1C105K080AC": {
+      "url": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1C105K080AC",
+      "record_retrieved": false,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    "C2012X5R1V106K085AC": {
+      "url": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X5R1V106K085AC",
+      "record_retrieved": false,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    "RC0603FR-072K2L": {
+      "url": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0603FR-072K2L",
+      "http_status": 200,
+      "record_retrieved": true,
+      "content_type": "application/pdf",
+      "sha256": "91a4d93fa54b2b1c6bc33300c5895d4bfdc3b90dc0610b40223d67de454bd417",
+      "electrical_qualification": "not established by HTTP check",
+      "stock_and_price": "not checked"
+    }
+  }
+}

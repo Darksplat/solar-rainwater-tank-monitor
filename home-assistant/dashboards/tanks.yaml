@@ -7,7 +7,7 @@ views:
         content: >-
           ## Rainwater reserve
           Volumes require verified calibration. Signed water change includes rainfall,
-          filling and withdrawal. Battery and solar telemetry await the power hardware.
+          filling and withdrawal. Battery SOC requires a verified full-charge reference; unknown SOC is shown as unavailable.
       - type: entities
         entities:
           - sensor.combined_water_remaining
@@ -33,6 +33,13 @@ views:
           - sensor.tank_1_water_depth
           - sensor.tank_1_sensor_status
           - binary_sensor.tank_1_wireless_connection
+          - sensor.tank_1_battery_voltage
+          - sensor.tank_1_battery_percentage
+          - binary_sensor.tank_1_battery_input_fault
+          - binary_sensor.tank_1_battery_soc_synchronized
+          - binary_sensor.tank_1_solar_charging
+          - sensor.tank_1_solar_input_power
+          - sensor.tank_1_thread_parent_rssi
       - type: entities
         title: Tank 2
         entities:
@@ -40,6 +47,13 @@ views:
           - sensor.tank_2_water_depth
           - sensor.tank_2_sensor_status
           - binary_sensor.tank_2_wireless_connection
+          - sensor.tank_2_battery_voltage
+          - sensor.tank_2_battery_percentage
+          - binary_sensor.tank_2_battery_input_fault
+          - binary_sensor.tank_2_battery_soc_synchronized
+          - binary_sensor.tank_2_solar_charging
+          - sensor.tank_2_solar_input_power
+          - sensor.tank_2_thread_parent_rssi
       - type: history-graph
         title: Daily water levels
         hours_to_show: 24
@@ -58,3 +72,17 @@ views:
         entities:
           - sensor.tank_1_net_water_change
           - sensor.tank_2_net_water_change
+      - type: history-graph
+        title: Battery voltage — weekly
+        hours_to_show: 168
+        entities:
+          - sensor.tank_1_battery_voltage
+          - sensor.tank_2_battery_voltage
+      - type: history-graph
+        title: Solar power and net battery current
+        hours_to_show: 24
+        entities:
+          - sensor.tank_1_solar_input_power
+          - sensor.tank_2_solar_input_power
+          - sensor.tank_1_battery_current
+          - sensor.tank_2_battery_current

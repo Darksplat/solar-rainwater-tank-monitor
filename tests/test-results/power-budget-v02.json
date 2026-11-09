@@ -1,0 +1,119 @@
+{
+  "sensitivity": {
+    "5W": {
+      "loads_Wh_day": {
+        "processor_radio_and_board": 7.454117647058824,
+        "three_INA228_allowance_1mA_each": 0.27952941176470586,
+        "loop_boost_and_boost_IC": 0.3449534117647059,
+        "charger_standby": 6.144,
+        "SmartBatteryProtect_BLE_on_1p4mA": 0.43008,
+        "reverse_controller_allowance_200uA": 0.06144000000000001,
+        "raw_presence_detector_allowance_150uA": 0.046079999999999996,
+        "BMS_allowance_2mA": 0.6144000000000001,
+        "buck_IQ_allowance_50uA": 0.015360000000000002,
+        "reverse_diode_allowance": 0.6719999999999999,
+        "pullups_dividers_LED_allowance": 0.15,
+        "battery_self_discharge_allowance_3pct_month": 0.256
+      },
+      "daily_Wh": 16.467960470588235,
+      "seven_day_with_margin_Wh": 144.09465411764705,
+      "usable_battery_Wh": 163.84000000000003,
+      "battery_pass": true,
+      "harvest_Wh_day": 4.354054054054054,
+      "net_recharge_Wh_day": -12.113906416534181,
+      "recovery_days": null,
+      "solar_assumption_PSH": 1.5,
+      "measured": false
+    },
+    "10W": {
+      "loads_Wh_day": {
+        "processor_radio_and_board": 7.454117647058824,
+        "three_INA228_allowance_1mA_each": 0.27952941176470586,
+        "loop_boost_and_boost_IC": 0.3449534117647059,
+        "charger_standby": 6.144,
+        "SmartBatteryProtect_BLE_on_1p4mA": 0.43008,
+        "reverse_controller_allowance_200uA": 0.06144000000000001,
+        "raw_presence_detector_allowance_150uA": 0.046079999999999996,
+        "BMS_allowance_2mA": 0.6144000000000001,
+        "buck_IQ_allowance_50uA": 0.015360000000000002,
+        "reverse_diode_allowance": 0.6719999999999999,
+        "pullups_dividers_LED_allowance": 0.15,
+        "battery_self_discharge_allowance_3pct_month": 0.256
+      },
+      "daily_Wh": 16.467960470588235,
+      "seven_day_with_margin_Wh": 144.09465411764705,
+      "usable_battery_Wh": 163.84000000000003,
+      "battery_pass": true,
+      "harvest_Wh_day": 8.708108108108108,
+      "net_recharge_Wh_day": -7.759852362480126,
+      "recovery_days": null,
+      "solar_assumption_PSH": 1.5,
+      "measured": false
+    },
+    "20W": {
+      "loads_Wh_day": {
+        "processor_radio_and_board": 7.454117647058824,
+        "three_INA228_allowance_1mA_each": 0.27952941176470586,
+        "loop_boost_and_boost_IC": 0.3449534117647059,
+        "charger_standby": 6.144,
+        "SmartBatteryProtect_BLE_on_1p4mA": 0.43008,
+        "reverse_controller_allowance_200uA": 0.06144000000000001,
+        "raw_presence_detector_allowance_150uA": 0.046079999999999996,
+        "BMS_allowance_2mA": 0.6144000000000001,
+        "buck_IQ_allowance_50uA": 0.015360000000000002,
+        "reverse_diode_allowance": 0.6719999999999999,
+        "pullups_dividers_LED_allowance": 0.15,
+        "battery_self_discharge_allowance_3pct_month": 0.256
+      },
+      "daily_Wh": 16.467960470588235,
+      "seven_day_with_margin_Wh": 144.09465411764705,
+      "usable_battery_Wh": 163.84000000000003,
+      "battery_pass": true,
+      "harvest_Wh_day": 17.416216216216217,
+      "net_recharge_Wh_day": 0.9482557456279821,
+      "recovery_days": 151.9575861069214,
+      "solar_assumption_PSH": 1.5,
+      "measured": false
+    },
+    "40W": {
+      "loads_Wh_day": {
+        "processor_radio_and_board": 7.454117647058824,
+        "three_INA228_allowance_1mA_each": 0.27952941176470586,
+        "loop_boost_and_boost_IC": 0.3449534117647059,
+        "charger_standby": 6.144,
+        "SmartBatteryProtect_BLE_on_1p4mA": 0.43008,
+        "reverse_controller_allowance_200uA": 0.06144000000000001,
+        "raw_presence_detector_allowance_150uA": 0.046079999999999996,
+        "BMS_allowance_2mA": 0.6144000000000001,
+        "buck_IQ_allowance_50uA": 0.015360000000000002,
+        "reverse_diode_allowance": 0.6719999999999999,
+        "pullups_dividers_LED_allowance": 0.15,
+        "battery_self_discharge_allowance_3pct_month": 0.256
+      },
+      "daily_Wh": 16.467960470588235,
+      "seven_day_with_margin_Wh": 144.09465411764705,
+      "usable_battery_Wh": 163.84000000000003,
+      "battery_pass": true,
+      "harvest_Wh_day": 34.832432432432434,
+      "net_recharge_Wh_day": 18.3644719618442,
+      "recovery_days": 7.846381557663734,
+      "solar_assumption_PSH": 1.5,
+      "measured": false
+    }
+  },
+  "panel_voltage": {
+    "series_panels": 2,
+    "unit_W": 20,
+    "cold_cell_C": -10,
+    "cold_Voc_V": 50.73700000000001,
+    "charger_limit_V": 75,
+    "hot_cell_C": 85,
+    "estimated_hot_Vmp_V": 24.922,
+    "pv_blocking_diode_allowance_V": 1.2,
+    "startup_required_V": 19.6,
+    "pv_TVS_standoff_V": 51,
+    "checks_pass": true,
+    "hot_Vmp_coefficient_is_estimate": true,
+    "part_discontinued_stock_must_be_confirmed": true
+  }
+}

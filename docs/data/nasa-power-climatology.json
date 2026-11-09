@@ -1,0 +1,61 @@
+{
+  "request_url": "https://power.larc.nasa.gov/api/temporal/climatology/point?parameters=ALLSKY_SFC_SW_DWN&community=RE&longitude=144.22&latitude=-36.76&format=JSON",
+  "locality": "Approximate Maiden Gully locality centroid; not a site measurement",
+  "retrieved_date": "2026-11-09",
+  "response": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        144.22,
+        -36.76,
+        336.72
+      ]
+    },
+    "properties": {
+      "parameter": {
+        "ALLSKY_SFC_SW_DWN": {
+          "JAN": 7.7578,
+          "FEB": 6.9053,
+          "MAR": 5.6098,
+          "APR": 3.995,
+          "MAY": 2.7458,
+          "JUN": 2.135,
+          "JUL": 2.2867,
+          "AUG": 3.2254,
+          "SEP": 4.5422,
+          "OCT": 6.0223,
+          "NOV": 7.0094,
+          "DEC": 7.7508,
+          "ANN": 4.9908
+        }
+      }
+    },
+    "header": {
+      "title": "NASA/POWER Source Native Resolution Climatology Climatologies",
+      "api": {
+        "version": "v2.10.1",
+        "name": "POWER Climatology API"
+      },
+      "sources": [
+        "SYN1DEG"
+      ],
+      "fill_value": -999.0,
+      "time_standard": "LST",
+      "range": "25-year Meteorological and Solar Monthly & Annual Climatologies (January 2001 - December 2025)"
+    },
+    "messages": [
+      "The requested parameters are retrieved from a pre-computed climatological period (January 2001 - December 2025)"
+    ],
+    "parameters": {
+      "ALLSKY_SFC_SW_DWN": {
+        "units": "kW-hr/m^2/day",
+        "longname": "All Sky Surface Shortwave Downward Irradiance"
+      }
+    },
+    "times": {
+      "data": 0.053,
+      "process": 0.03
+    }
+  }
+}

@@ -9,17 +9,17 @@ constexpr float nan = std::numeric_limits<float>::quiet_NaN();
 enum class Status { ok, uncalibrated, adc_fault, loop_low, loop_high, unstable, blind_region, above_max, invalid_calibration };
 struct Calibration {
  bool enabled=false, manufacturer_method=false;
- float length=0, width=0, usable_depth=3.8f, diaphragm=0.05f, rated_litres=10000,
+ float length=0, width=0, corner_radius=0, usable_depth=3.8f, diaphragm=0.05f, rated_litres=10000,
        max_level=3.85f, verified_litres=0, reference_depth=0,
        zero_ma=4, span_ma=16, pressure_pa=60000, density=998.2f, gravity=9.80665f;
  bool valid() const {
-  const float vals[]={length,width,usable_depth,diaphragm,rated_litres,max_level,verified_litres,reference_depth,zero_ma,span_ma,pressure_pa,density,gravity};
+  const float vals[]={length,width,corner_radius,usable_depth,diaphragm,rated_litres,max_level,verified_litres,reference_depth,zero_ma,span_ma,pressure_pa,density,gravity};
   for(float v:vals) if(!std::isfinite(v)) return false;
-  return diaphragm>=0 && usable_depth>0 && max_level>diaphragm && usable_depth<=max_level &&
+  return corner_radius>=0 && diaphragm>=0 && usable_depth>0 && max_level>diaphragm && usable_depth<=max_level &&
     rated_litres>0 && span_ma>0 && pressure_pa>0 && density>900 && density<1100 && gravity>9 && gravity<10 &&
-    (manufacturer_method ? verified_litres>0 && reference_depth>0 : length>0 && width>0);
+    (manufacturer_method ? verified_litres>0 && reference_depth>0 : length>0 && width>0 && 2*corner_radius<=std::min(length,width));
  }
- float litres_per_m() const {return manufacturer_method ? verified_litres/reference_depth : length*width*1000;}
+ float litres_per_m() const {return manufacturer_method ? verified_litres/reference_depth : (length*width-(4.0f-3.14159265358979323846f)*corner_radius*corner_radius)*1000;}
 };
 struct Result {Status status; float depth=nan, total_litres=nan, usable_litres=nan, capacity=nan, percent=nan;};
 inline Status loop_status(float ma) {

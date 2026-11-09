@@ -1,0 +1,1 @@
+(sym_lib_table (lib (name "TankMonitor") (type "KiCad") (uri "${KIPRJMOD}/../library/TankMonitor.kicad_sym") (options "") (descr "Project-specific verified pin maps")))

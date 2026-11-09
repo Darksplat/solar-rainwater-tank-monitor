@@ -1,0 +1,395 @@
+{
+  "date": "2026-11-09",
+  "records": {
+    "1715721": {
+      "mpn": "1715721",
+      "url": "https://www.digikey.com.au/en/products/detail/phoenix-contact/1715721/260631?s=N4Ig7CBcoIYE5QIwA5EGYA0IYBcmZAAcBLKNABgFY0KAWAX3qA",
+      "unit_price_AUD": "1.69000",
+      "availability": "1,212",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09"
+    },
+    "AP63203WU-7": {
+      "mpn": "AP63203WU-7",
+      "url": "https://www.digikey.com.au/en/products/detail/diodes-incorporated/AP63203WU-7/9858430",
+      "unit_price_AUD": "1.30000",
+      "availability": "0",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09",
+      "alternativeURLs": [
+        "https://au.element14.com/diodes-inc/ap63203wu-7/dc-dc-conv-sync-buck-1-1mhz-85deg/dp/3518307",
+        "https://au.mouser.com/en/ProductDetail/Diodes-Incorporated/AP63203WU-7?qs=u16ybLDytRZ1JqxbuLkMJw%3D%3D"
+      ]
+    },
+    "C1608X7R1C105K080AC": {
+      "mpn": "C1608X7R1C105K080AC",
+      "url": "https://www.digikey.com.au/en/products/detail/tdk/C1608X7R1C105K080AC/634399",
+      "unit_price_AUD": "0.18000",
+      "availability": "839,037",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09"
+    },
+    "C1608X7R1H103K080AA": {
+      "mpn": "C1608X7R1H103K080AA",
+      "url": "https://www.digikey.com.au/en/products/detail/tdk/C1608X7R1H103K080AA/513809",
+      "unit_price_AUD": "0.15000",
+      "availability": "456,678",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09"
+    },
+    "C1608X7R1H104K080AA": {
+      "mpn": "C1608X7R1H104K080AA",
+      "url": "https://www.digikey.com.au/en/products/detail/tdk/C1608X7R1H104K080AA/567687",
+      "unit_price_AUD": "0.16000",
+      "availability": "0",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09"
+    },
+    "C2012X7R1C475K125AB": {
+      "mpn": "C2012X7R1C475K125AB",
+      "url": "https://www.digikey.com.au/en/products/detail/tdk/C2012X7R1C475K125AB/2619200",
+      "unit_price_AUD": "0.44000",
+      "availability": "100,246",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09"
+    },
+    "C2012X7R2A104K125AA": {
+      "mpn": "C2012X7R2A104K125AA",
+      "url": "https://www.digikey.com.au/en/products/detail/tdk/C2012X7R2A104K125AA/569044",
+      "unit_price_AUD": "0.25000",
+      "availability": "383,512",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09"
+    },
+    "C3225X7R1C226M250AC": {
+      "mpn": "C3225X7R1C226M250AC",
+      "url": "https://www.digikey.com.au/en/products/detail/tdk/C3225X7R1C226M250AC/1944442",
+      "unit_price_AUD": "0.90000",
+      "availability": "0",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09"
+    },
+    "C3225X7R1H106K250AC": {
+      "mpn": "C3225X7R1H106K250AC",
+      "url": "https://www.digikey.com.au/en/products/detail/tdk/C3225X7R1H106K250AC/10415006",
+      "unit_price_AUD": "1.51000",
+      "availability": "181",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09"
+    },
+    "C3225X7R1H475K250AB": {
+      "mpn": "C3225X7R1H475K250AB",
+      "url": "https://www.digikey.com.au/en/products/detail/tdk/C3225X7R1H475K250AB/2733161",
+      "unit_price_AUD": "1.15000",
+      "availability": "23,246",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09"
+    },
+    "CRCW2512110RFKEGHP": {
+      "mpn": "CRCW2512110RFKEGHP",
+      "url": "https://www.digikey.com/en/products/detail/vishay-dale/CRCW2512110RFKEGHP/2201305",
+      "unit_price_AUD": "",
+      "availability": "not confirmed",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09",
+      "alternativeURLs": []
+    },
+    "DMP2035U-7": {
+      "mpn": "DMP2035U-7",
+      "url": "https://www.digikey.com.au/en/products/detail/diodes-incorporated/DMP2035U-7/2181234",
+      "unit_price_AUD": "",
+      "availability": "not confirmed",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09",
+      "alternativeURLs": [
+        "https://au.mouser.com/en/ProductDetail/Diodes-Incorporated/DMP2035U-7?qs=vIZ3oKQCLxpaFf9x%252BzushA%3D%3D"
+      ]
+    },
+    "ESP32-C6-MINI-1-N4": {
+      "mpn": "ESP32-C6-MINI-1-N4",
+      "url": "https://www.digikey.com.au/en/products/detail/espressif-systems/ESP32-C6-MINI-1-N4/17885796",
+      "unit_price_AUD": "6.60000",
+      "availability": "199",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09"
+    },
+    "INA228AIDGSR": {
+      "mpn": "INA228AIDGSR",
+      "url": "https://www.digikey.com.au/en/products/detail/texas-instruments/INA228AIDGSR/13691078",
+      "unit_price_AUD": "7.73000",
+      "availability": "0",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09",
+      "alternativeURLs": [
+        "https://au.mouser.com/en/ProductDetail/Texas-Instruments/INA228AIDGSR?qs=sGAEpiMZZMutXGli8Ay4kBffGVIM2U3rVmzD6X7M2%252BI%3D"
+      ]
+    },
+    "LTST-C190KGKT": {
+      "mpn": "LTST-C190KGKT",
+      "url": "https://www.digikey.com.au/en/products/detail/lite-on-inc/LTST-C190KGKT/386815",
+      "unit_price_AUD": "",
+      "availability": "not confirmed",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09"
+    },
+    "RC0603FR-07100KL": {
+      "mpn": "RC0603FR-07100KL",
+      "url": "https://www.digikey.com.au/en/products/detail/yageo/RC0603FR-07100KL/729836",
+      "unit_price_AUD": "",
+      "availability": "not confirmed",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09"
+    },
+    "RC0603FR-0710KL": {
+      "mpn": "RC0603FR-0710KL",
+      "url": "https://www.digikey.com.au/en/products/detail/yageo/RC0603FR-0710KL/726880",
+      "unit_price_AUD": "0.15000",
+      "availability": "2,633,738",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09"
+    },
+    "RC0603FR-0710RL": {
+      "mpn": "RC0603FR-0710RL",
+      "url": "https://www.digikey.com.au/en/products/detail/yageo/RC0603FR-0710RL/726879",
+      "unit_price_AUD": "0.15000",
+      "availability": "0",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09"
+    },
+    "RC0603FR-071KL": {
+      "mpn": "RC0603FR-071KL",
+      "url": "https://www.digikey.com.au/en/products/detail/yageo/RC0603FR-071KL/729790",
+      "unit_price_AUD": "",
+      "availability": "not confirmed",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09"
+    },
+    "RC0603FR-072K2L": {
+      "mpn": "RC0603FR-072K2L",
+      "url": "https://www.digikey.com.au/en/products/detail/yageo/RC0603FR-072K2L/729963",
+      "unit_price_AUD": "0.15000",
+      "availability": "64,639",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09"
+    },
+    "RC0603FR-0747RL": {
+      "mpn": "RC0603FR-0747RL",
+      "url": "https://www.digikey.com.au/en/products/detail/yageo/RC0603FR-0747RL/730199",
+      "unit_price_AUD": "0.15000",
+      "availability": "321,975",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09"
+    },
+    "RC0603FR-074K7L": {
+      "mpn": "RC0603FR-074K7L",
+      "url": "https://www.digikey.com.au/en/products/detail/yageo/RC0603FR-074K7L/727212",
+      "unit_price_AUD": "0.15000",
+      "availability": "4,484,511",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09"
+    },
+    "RC0603FR-074K99L": {
+      "mpn": "RC0603FR-074K99L",
+      "url": "https://www.digikey.com.au/en/products/detail/yageo/RC0603FR-074K99L/730166",
+      "unit_price_AUD": "0.15000",
+      "availability": "80,845",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09"
+    },
+    "RT0603BRD0710KL": {
+      "mpn": "RT0603BRD0710KL",
+      "url": "https://www.digikey.com.au/en/products/detail/yageo/RT0603BRD0710KL/1072198",
+      "unit_price_AUD": "0.15000",
+      "availability": "248,686",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09"
+    },
+    "RT0603BRD07137KL": {
+      "mpn": "RT0603BRD07137KL",
+      "url": "https://www.digikey.com/en/products/detail/yageo/RT0603BRD07137KL/1072238",
+      "unit_price_AUD": "",
+      "availability": "not confirmed",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09",
+      "alternativeURLs": []
+    },
+    "RT1206BRD072RL": {
+      "mpn": "RT1206BRD072RL",
+      "url": "https://www.digikey.com/en/products/detail/yageo/RT1206BRD072RL/17020542",
+      "unit_price_AUD": "",
+      "availability": "not confirmed",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09",
+      "alternativeURLs": []
+    },
+    "SMBJ15A": {
+      "mpn": "SMBJ15A",
+      "url": "https://www.digikey.com.au/en/products/detail/littelfuse-inc/SMBJ15A/285980",
+      "unit_price_AUD": "",
+      "availability": "not confirmed",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09",
+      "alternativeURLs": [
+        "https://au.element14.com/littelfuse/smbj15a/tvs-diode-600w-15v-unidir-do-214aa/dp/2691587",
+        "https://au.mouser.com/ProductDetail/Littelfuse/SMBJ15A?qs=JJML70Qc14tCp%252BqUTrW7IA%3D%3D"
+      ]
+    },
+    "SMBJ18A": {
+      "mpn": "SMBJ18A",
+      "url": "https://www.digikey.com.au/en/products/detail/littelfuse-inc/SMBJ18A/285984",
+      "unit_price_AUD": "",
+      "availability": "14,250",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09",
+      "alternativeURLs": [
+        "https://au.element14.com/littelfuse/smbj18a/diode-tvs-18v-600w-5-uni-smb/dp/1827612",
+        "https://au.mouser.com/en/ProductDetail/Littelfuse/SMBJ18A?qs=zHiv0nsVGmq6qhYJ9exSJA%3D%3D"
+      ]
+    },
+    "SMBJ51A": {
+      "mpn": "SMBJ51A",
+      "url": "https://www.digikey.com/en/products/detail/littelfuse-inc/SMBJ51A/762800",
+      "unit_price_AUD": "",
+      "availability": "AU stock/price not confirmed",
+      "basis": "Verified exact Littelfuse global product record; Australian quote required",
+      "observed": "2026-11-09"
+    },
+    "SRP5030TA-100M": {
+      "mpn": "SRP5030TA-100M",
+      "url": "https://www.digikey.com.au/en/products/detail/bourns-inc/SRP5030TA-100M/5429753",
+      "unit_price_AUD": "1.54000",
+      "availability": "966",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09"
+    },
+    "SRP5030TA-4R7M": {
+      "mpn": "SRP5030TA-4R7M",
+      "url": "https://www.digikey.com.au/en/products/detail/bourns-inc/SRP5030TA-4R7M/5429759",
+      "unit_price_AUD": "1.51000",
+      "availability": "178",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09"
+    },
+    "TPS61170DRVR": {
+      "mpn": "TPS61170DRVR",
+      "url": "https://www.digikey.com.au/en/products/detail/texas-instruments/TPS61170DRVR/1769603",
+      "unit_price_AUD": "3.71000",
+      "availability": "0",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09",
+      "alternativeURLs": []
+    },
+    "TSW-106-07-G-S": {
+      "mpn": "TSW-106-07-G-S",
+      "url": "https://www.digikey.com.au/en/products/detail/samtec-inc/TSW-106-07-G-S/1101321",
+      "unit_price_AUD": "0.84000",
+      "availability": "3,290",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09"
+    },
+    "WSL2512R0100FEA": {
+      "mpn": "WSL2512R0100FEA",
+      "url": "https://www.digikey.com.au/en/products/detail/vishay-dale/WSL2512R0100FEA/713493",
+      "unit_price_AUD": "0.92000",
+      "availability": "280,085",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09"
+    },
+    "WSL2512R0200FEA": {
+      "mpn": "WSL2512R0200FEA",
+      "url": "https://www.digikey.com.au/en/products/detail/vishay-dale/WSL2512R0200FEA/712563",
+      "unit_price_AUD": "0.97000",
+      "availability": "88,279",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09"
+    },
+    "TL3342F160QG-TR": {
+      "mpn": "TL3342F160QG-TR",
+      "url": "https://www.digikey.com.au/en/products/detail/e-switch/TL3342F160QG-TR/379004",
+      "unit_price_AUD": "0.86000",
+      "availability": "5,953",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09"
+    },
+    "B360A-13-F": {
+      "mpn": "B360A-13-F",
+      "url": "https://www.digikey.com.au/en/products/detail/diodes-incorporated/B360A-13-F/724980",
+      "unit_price_AUD": "0.80000",
+      "availability": "26,358",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09"
+    },
+    "C2012X5R1V106K085AC": {
+      "mpn": "C2012X5R1V106K085AC",
+      "url": "https://www.digikey.com.au/en/products/detail/tdk/C2012X5R1V106K085AC/3951653",
+      "unit_price_AUD": "0.70000",
+      "availability": "893",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09"
+    },
+    "0287005.H": {
+      "mpn": "0287005.H",
+      "url": "https://www.digikey.com.au/en/products/detail/littelfuse-inc/0287005-H/3104044",
+      "unit_price_AUD": "0.89000",
+      "availability": "1,982",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09"
+    },
+    "0287002.H": {
+      "mpn": "0287002.H",
+      "url": "https://www.digikey.com.au/en/products/detail/littelfuse-inc/0287002-H/3104041",
+      "unit_price_AUD": "0.93000",
+      "availability": "2,848",
+      "basis": "Cached supplier result, quantity-one list price; GST and checkout confirmation required",
+      "observed": "2026-11-09"
+    },
+    "1N4148W-7-F": {
+      "mpn": "1N4148W-7-F",
+      "url": "https://www.digikey.com.au/en/products/detail/diodes-incorporated/1N4148W-7-F/815280",
+      "unit_price_AUD": "0.26000",
+      "availability": "1,271,200",
+      "basis": "Cached exact-MPN supplier result; quantity-one price where shown; GST/checkout reconfirmation required",
+      "observed": "2026-11-09"
+    },
+    "1N5408-E3/54": {
+      "mpn": "1N5408-E3/54",
+      "url": "https://www.digikey.com.au/en/products/detail/vishay-general-semiconductor-diodes-division/1N5408-E3-54/190152",
+      "unit_price_AUD": "",
+      "availability": "not verified",
+      "basis": "Cached exact-MPN supplier result; quantity-one price where shown; GST/checkout reconfirmation required",
+      "observed": "2026-11-09"
+    },
+    "BC847B-7-F": {
+      "mpn": "BC847B-7-F",
+      "url": "https://www.digikey.com.au/en/products/detail/diodes-incorporated/BC847B-7-F/2181060",
+      "unit_price_AUD": "",
+      "availability": "not verified",
+      "basis": "Cached exact-MPN supplier result; quantity-one price where shown; GST/checkout reconfirmation required",
+      "observed": "2026-11-09"
+    },
+    "IPD50N06S4L12ATMA2": {
+      "mpn": "IPD50N06S4L12ATMA2",
+      "url": "https://www.digikey.com.au/en/products/detail/infineon-technologies/IPD50N06S4L12ATMA2/6108992",
+      "unit_price_AUD": "",
+      "availability": "23,753",
+      "basis": "Cached exact-MPN supplier result; quantity-one price where shown; GST/checkout reconfirmation required",
+      "observed": "2026-11-09"
+    },
+    "LTC4365ITS8#TRMPBF": {
+      "mpn": "LTC4365ITS8#TRMPBF",
+      "url": "https://www.digikey.com.au/en/products/detail/analog-devices-inc/LTC4365ITS8-TRMPBF/2405924",
+      "unit_price_AUD": "",
+      "availability": "not verified",
+      "basis": "Cached exact-MPN supplier result; quantity-one price where shown; GST/checkout reconfirmation required",
+      "observed": "2026-11-09"
+    },
+    "RC0603FR-0784K5L": {
+      "mpn": "RC0603FR-0784K5L",
+      "url": "https://www.digikey.com.au/en/products/detail/yageo/RC0603FR-0784K5L/727408",
+      "unit_price_AUD": "",
+      "availability": "not verified",
+      "basis": "Cached exact-MPN supplier result; quantity-one price where shown; GST/checkout reconfirmation required",
+      "observed": "2026-11-09"
+    }
+  }
+}

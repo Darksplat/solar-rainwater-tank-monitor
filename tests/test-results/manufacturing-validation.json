@@ -1,0 +1,32 @@
+{
+  "board_sha256": "8b81783eefc5f11bb64a9250cf17bd8849fb354c981dc20fd07060da77174882",
+  "schematic_sha256": "c798ae38de934a00068df95dc83855798e8756e97c8490dc06fc79f437a1eb01",
+  "date": "2026-11-09",
+  "source_pad_net_parity": true,
+  "components": 97,
+  "footprints_with_mounts": 101,
+  "DRC": "zero violations / zero unconnected pads",
+  "ERC": "zero violations",
+  "smd_placement_rows": 77,
+  "export_structure_checks": true,
+  "fabricator_CAM_review": "not performed",
+  "files": {
+    "manufacturing/gerbers/tank-monitor-job.gbrjob": "267ece613ed36cbe10ec254a37fd7567f2329bbf425d6382cf1dd421f2728194",
+    "manufacturing/gerbers/tank-monitor-In2_Cu.g2": "69a19060142a3729cace1050c0d0a96e2c70c9bb337f473e2a3274edbf49c9ef",
+    "manufacturing/gerbers/tank-monitor-B_Cu.gbl": "6a6e0c0f20316df49008a3e511f52c3ff2ebd9f02e03ed430f2da6367fd776df",
+    "manufacturing/gerbers/tank-monitor-B_Paste.gbp": "8c9f632a141d50a1618685e61dade2cca94896e94b98b703e47050f7e5c52b29",
+    "manufacturing/gerbers/tank-monitor-F_Mask.gts": "179bbe4e179705e3e058a535965ea17192c00163577f1c6837bb334cf272f059",
+    "manufacturing/gerbers/tank-monitor-F_Cu.gtl": "db63410b1c7ed99b8dad098bf90e4b7f8c6ad4b83d12a91474ec72ec3289d040",
+    "manufacturing/gerbers/tank-monitor-Edge_Cuts.gm1": "60937b1849be9a51b8489503d399520cb62fd4fa7e70ac64f9c946e84e1ee53e",
+    "manufacturing/gerbers/tank-monitor-B_Silkscreen.gbo": "e903edb0bc1cc896dd4cfe2069a9fe24c4b69c23bb7019098d46f7f1aa2a965e",
+    "manufacturing/gerbers/tank-monitor-F_Silkscreen.gto": "5f0270d6d189d287bf4ff8ed4dec44772b07b6686d88f475f484f8102d450ed9",
+    "manufacturing/gerbers/tank-monitor-B_Mask.gbs": "3d2453315b392d2a3421f6d2ca0e5874ce94d17a259a34785acb853c8b3c2fcf",
+    "manufacturing/gerbers/tank-monitor-In1_Cu.g1": "5cbb7df07da305b24c020caa6effeb43f9bf16f430c271e81e7d2567c9b8fc20",
+    "manufacturing/gerbers/tank-monitor-F_Paste.gtp": "298b97c0b23411aece92e93639d307b081447d62a7aab15680c530231b795660",
+    "manufacturing/drill/tank-monitor-PTH-drl_map.svg": "a8ccb8ac3a16718a877b60ead7bd8be4fc2bfe44131bedf5e0fe6489588e804c",
+    "manufacturing/drill/tank-monitor-NPTH.drl": "95412e186931fc47260c2e3f57e052b11bea41c8f0558caa43d2d2470343740a",
+    "manufacturing/drill/tank-monitor-PTH.drl": "fb3bb6f3a794f1bbada2f8a1c9427bdc753fe06f460fd1bafccd6e97bdf6ba31",
+    "manufacturing/drill/tank-monitor-drill.rpt": "d784216856f483e93c5420c039e23b4c2814d852c5af6e11b6a59c2fef3090ae",
+    "manufacturing/drill/tank-monitor-NPTH-drl_map.svg": "3810d1aefbbc7c0bdba3d74d2bd63853616a0b297bd5c2fb6dc989fb6cda21e9"
+  }
+}

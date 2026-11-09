@@ -1,0 +1,23 @@
+{
+  "battery_protection_UV_range_V": [
+    4.767935114137707,
+    5.395546956092464
+  ],
+  "battery_protection_OV_range_V": [
+    16.91573012956264,
+    19.11164347429121
+  ],
+  "battery_reverse_FET_rating_V": 60,
+  "PV_reverse_diode_rating_V": 1000,
+  "netlist_manifest_match": true,
+  "components": 97,
+  "minimum_loop_supply_V": 16.77793516209476,
+  "maximum_loop_supply_V": 17.637714285714285,
+  "minimum_transmitter_voltage_at_24mA_V": 11.300055162094761,
+  "maximum_bounded_short_current_A": 0.08122177378238717,
+  "limiter_power_each_W": 0.7416321022172849,
+  "shunt_fault_power_W": 0.013226937955396336,
+  "limiter_rating_W": 1.5,
+  "temperature_excursion_C": 60,
+  "assumptions": "DC source <= boost reference/resistor tolerance+TCR bound; two limiter resistors intact; 85C electronics stress only, not a whole-system operating rating; TVS clamp comparisons are nominal datasheet pulse conditions, not hot surge qualification; no lightning immunity claimed"
+}

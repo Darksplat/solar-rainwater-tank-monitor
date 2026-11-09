@@ -1,0 +1,1 @@
+(fp_lib_table (lib (name "TankMonitor") (type "KiCad") (uri "${KIPRJMOD}/../library/TankMonitor.pretty") (options "") (descr "Silk-only board-edge module adaptation")))

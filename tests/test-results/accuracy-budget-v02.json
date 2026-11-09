@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-09",
+  "head_m": 2.12,
+  "pressure_span_Pa": 40000,
+  "density_kg_m3": 998.2,
+  "operating_current_A": 0.012301070329440002,
+  "contributions": {
+    "transmitter_reference_0p25pct_FS_mm": 10.215550119995273,
+    "uncalibrated_shunt_0p1pct_at_operating_current_mm": 3.1415550119995275,
+    "INA228_gain_0p05pct_mm": 1.5707775059997637,
+    "INA228_offset_1uV_at_2ohm_mm": 0.1276943764999409,
+    "shunt_drift_25ppm_60C_span_mm": 4.712332517999291,
+    "INA228_gain_drift_20ppm_60C_span_mm": 3.7698660143994336,
+    "density_allowance_0p6pct_mm": 12.72,
+    "diaphragm_survey_allowance_mm": 5
+  },
+  "interpretation": "bounded illustrative contributors, not independent random uncertainties; do not RSS or claim achieved accuracy",
+  "transmitter_accuracy_class": "conditional on configured quote; thermal error not yet bounded",
+  "calibration": "two-point chain calibration removes static gain/offset only to the reference uncertainty; does not remove unmeasured thermal drift, density change or mounting error",
+  "target_plus_minus_20mm": "not verified or guaranteed"
+}

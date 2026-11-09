@@ -3,10 +3,20 @@ esphome:
   friendly_name: ${friendly_name}
   includes:
     - tank_core.h
+    - battery_core.h
+external_components:
+  - source:
+      type: local
+      path: ../components
+    components: [tank_ina228]
 esp32:
   board: esp32-c6-devkitc-1
   framework:
     type: esp-idf
+status_led:
+  pin:
+    number: GPIO18
+    inverted: true
 logger:
 api:
   encryption:
@@ -25,12 +35,12 @@ i2c:
   sda: GPIO6
   scl: GPIO7
   scan: true
-ads1115:
-  - address: 0x48
 switch:
   - platform: gpio
     id: loop_power
-    pin: GPIO10
+    pin:
+      number: GPIO4
+      inverted: true
     internal: true
     restore_mode: ALWAYS_OFF
   - platform: template
@@ -44,6 +54,36 @@ switch:
     optimistic: true
     restore_mode: RESTORE_DEFAULT_OFF
 number:
+  - platform: template
+    name: Internal corner radius
+    id: corner_radius_m
+    unit_of_measurement: m
+    min_value: 0
+    max_value: 5
+    step: 0.001
+    initial_value: 0
+    optimistic: true
+    restore_value: true
+  - platform: template
+    name: Pressure full scale
+    id: pressure_kpa
+    unit_of_measurement: kPa
+    min_value: 1
+    max_value: 1000
+    step: 0.1
+    initial_value: 40
+    optimistic: true
+    restore_value: true
+  - platform: template
+    name: Battery capacity
+    id: battery_capacity
+    unit_of_measurement: Ah
+    min_value: 1
+    max_value: 100
+    step: 0.1
+    initial_value: 20
+    optimistic: true
+    restore_value: true
   - platform: template
     name: Internal length
     id: length_m
@@ -71,7 +111,7 @@ number:
     min_value: 0.1
     max_value: 6
     step: 0.001
-    initial_value: 3.85
+    initial_value: 2.17
     optimistic: true
     restore_value: true
   - platform: template
@@ -81,7 +121,7 @@ number:
     min_value: 0.1
     max_value: 6
     step: 0.001
-    initial_value: 3.8
+    initial_value: 2.12
     optimistic: true
     restore_value: true
   - platform: template
@@ -145,12 +185,82 @@ number:
     optimistic: true
     restore_value: true
 sensor:
-  - platform: ads1115
-    id: loop_adc
-    multiplexer: A0_GND
-    gain: 4.096
+  - platform: tank_ina228
+    id: loop_monitor
+    address: 0x42
+    shunt_resistance: 2 ohm
+    max_current: 0.08A
     update_interval: never
-    internal: true
+    current:
+      id: loop_adc
+      internal: true
+    voltage:
+      name: Transmitter voltage
+    diagnostic:
+      name: Loop ADC status
+  - platform: tank_ina228
+    id: battery_monitor
+    address: 0x40
+    shunt_resistance: 0.01 ohm
+    max_current: 8A
+    update_interval: 1s
+    voltage:
+      name: Battery voltage
+      id: battery_voltage
+    current:
+      name: Battery current
+      id: battery_current
+    power:
+      name: Battery power
+    charge:
+      name: Net battery charge counter
+      id: battery_counter
+      on_value:
+        - lambda: |-
+            if(!id(battery_input_fault).has_state() || id(battery_input_fault).state) {
+              tank::battery_soc.invalidate(); id(battery_percentage).publish_state(NAN); return;
+            }
+            float pct=tank::battery_soc.observe(x,millis(),id(battery_capacity).state);
+            id(battery_percentage).publish_state(pct);
+    die_temperature:
+      name: Battery monitor die temperature
+    diagnostic:
+      name: Battery monitor status
+  - platform: tank_ina228
+    id: solar_monitor
+    address: 0x41
+    shunt_resistance: 0.02 ohm
+    max_current: 8A
+    update_interval: 5s
+    voltage:
+      name: Solar input voltage
+      id: solar_voltage
+    current:
+      name: Solar input current
+      id: solar_current
+    power:
+      name: Solar input power
+      id: solar_power
+    diagnostic:
+      name: Solar monitor status
+  - platform: template
+    name: Battery percentage
+    id: battery_percentage
+    unit_of_measurement: '%'
+    device_class: battery
+    state_class: measurement
+    accuracy_decimals: 1
+    update_interval: never
+  - platform: openthread_info
+    parent_average_rssi:
+      name: Thread parent RSSI
+      update_interval: 60s
+    parent_link_quality_in:
+      name: Thread parent link quality
+      update_interval: 60s
+    attach_attempts:
+      name: Thread attach attempts
+      update_interval: 60s
   - platform: template
     name: Loop current
     id: current_ma
@@ -217,9 +327,63 @@ text_sensor:
     id: sensor_status
     update_interval: never
 binary_sensor:
+  - platform: gpio
+    id: battery_raw_present
+    name: Battery input present
+    device_class: power
+    pin:
+      number: GPIO20
+      inverted: true
+      mode: INPUT
+    filters:
+      - delayed_on: 20ms
+      - delayed_off: 20ms
+  - platform: gpio
+    id: battery_protection_trip
+    name: Battery protection trip
+    device_class: problem
+    pin:
+      number: GPIO19
+      inverted: true
+      mode: INPUT
+  - platform: template
+    id: battery_input_fault
+    name: Battery input fault
+    device_class: problem
+    lambda: |-
+      return !id(battery_raw_present).has_state() || !id(battery_raw_present).state ||
+        !id(battery_protection_trip).has_state() || id(battery_protection_trip).state;
+    on_press:
+      - switch.turn_off: loop_power
+      - script.stop: measure
+      - lambda: |-
+          tank::battery_soc.invalidate(); id(battery_percentage).publish_state(NAN);
+          id(sensor_status).publish_state("battery_input_fault");
+          id(water_depth).publish_state(NAN); id(remaining).publish_state(NAN);
+          id(contained).publish_state(NAN); id(percentage).publish_state(NAN);
+          id(capacity).publish_state(NAN); id(pressure).publish_state(NAN);
+  - platform: template
+    name: Solar charging
+    lambda: |-
+      return id(battery_input_fault).has_state() && !id(battery_input_fault).state && std::isfinite(id(battery_current).state) && id(battery_current).state < -0.02f;
+  - platform: template
+    name: Battery low
+    lambda: |-
+      return std::isfinite(id(battery_voltage).state) && id(battery_voltage).state < 12.2f;
+  - platform: template
+    name: Battery SOC synchronized
+    lambda: return tank::battery_soc.valid();
   - platform: status
     name: Wireless connection
 button:
+  - platform: template
+    name: Confirm verified full battery
+    on_press:
+      - lambda: |-
+          bool accepted=id(battery_input_fault).has_state() && !id(battery_input_fault).state && tank::battery_soc.confirm_full(id(battery_capacity).state,
+            id(battery_counter).state,id(battery_voltage).state,id(battery_current).state,millis());
+          if(!accepted)tank::battery_soc.invalidate();
+          id(battery_percentage).publish_state(accepted ? 100.0f : NAN);
   - platform: restart
     name: Restart
   - platform: template
@@ -236,6 +400,18 @@ script:
   - id: measure
     mode: single
     then:
+      - if:
+          condition:
+            lambda: |-
+              return !tank::can_measure_loop(id(battery_voltage).state, !id(battery_input_fault).has_state() || id(battery_input_fault).state);
+          then:
+            - switch.turn_off: loop_power
+            - lambda: |-
+                id(sensor_status).publish_state("power_supply_fault");
+                id(water_depth).publish_state(NAN); id(remaining).publish_state(NAN);
+                id(contained).publish_state(NAN); id(percentage).publish_state(NAN);
+                id(capacity).publish_state(NAN); id(pressure).publish_state(NAN);
+            - script.stop: measure
       - switch.turn_on: loop_power
       - delay: 5s
       - lambda: |-
@@ -243,16 +419,17 @@ script:
       - repeat:
           count: 9
           then:
-            - component.update: loop_adc
-            - delay: 100ms
+            - component.update: loop_monitor
+            - delay: 200ms
             - lambda: |-
-                id(samples)[id(sample_index)++] = id(loop_adc).state * 10.0f;
+                id(samples)[id(sample_index)++] = id(loop_adc).state * 1000.0f;
       - switch.turn_off: loop_power
       - lambda: |-
           tank::Calibration c;
           c.enabled=id(calibrated).state;
           c.manufacturer_method=id(manufacturer_method).state;
           c.length=id(length_m).state; c.width=id(width_m).state;
+          c.corner_radius=id(corner_radius_m).state; c.pressure_pa=id(pressure_kpa).state*1000.0f;
           c.max_level=id(maximum_m).state; c.usable_depth=id(usable_m).state;
           c.diaphragm=id(diaphragm_m).state; c.rated_litres=id(rated_l).state;
           c.verified_litres=id(verified_l).state; c.reference_depth=id(reference_m).state;

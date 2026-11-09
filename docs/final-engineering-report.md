@@ -1,15 +1,25 @@
-# Development handover report — 0.1.0-dev
+# Engineering status report — revision0.2 development
 
-The requested finished hardware product is **not complete**. This revision preserves actual source work and test evidence; it is not a manufacturing release.
+The project now includes a complete editable electrical schematic and routed custom PCB, four-layer fabrication exports, three-monitor firmware with battery/solar reporting, two independently named builds, HA dashboard/alerts, calculation tools, CAD packaging/mounting studies and reproduction documentation. It is an engineering development snapshot; the finished outdoor monitoring system has not achieved physical acceptance.
 
-Fully completed and tested within limited software scope: shared depth/volume calculation core, calibration regression tool, power sensitivity model, fault-input tests, C++ host compilation, Python tests and syntax checks. Both ESPHome configurations compile as recorded in build-summary.json. FreeCAD concept solids and STEP/STL exports were generated and roundtrip-checked.
+## Completed and executed
 
-Completed as examples/simulations only: sensor input scenario CSV, conservative seven-day energy model, HA dashboard/templates/water alerts (YAML parsing, not HA runtime validation). No measured electrical consumption or verified site winter solar yield exists.
+Twelve Python tests, actual shared C++ water/battery helpers, actual INA228 driver fault tests and24 HA template scenarios pass. Both ESPHome images compile. KiCad ERC/DRC report zero violations and zero unconnected pads. Exported netlist/board/source parity and fabrication structure checks pass. Four saved FreeCAD documents,38 STEP exports and35 closed STL meshes pass geometry checks. Test reports and hashes identify the evidence and its limits.
 
-Designed as preliminary concepts awaiting engineering and physical validation: two-node architecture, loop measurement interface, tray/standoffs/probe cage, pressure candidate and solar/battery capacity candidates. Fit, protection coordination, wind loading, ingress and accuracy are not established.
+## Designed or simulated
 
-Incomplete engineering deliverables: full production schematic and PCB, verified footprints, Gerber/drill/CPL/assembly files, final PCB 3D model, protected power/analog implementation, hardware-supported battery SOC and solar telemetry, battery/solar alert logic, final enclosure and panel mounts, complete qualified BOM/costs, final reproducible assembly manual and full hardware/system tests. These are not merely waiting to be manufactured.
+Worst-case DC loop compliance/current limiting, processor/radio/monitor/charger/disconnect/BMS/converter power allocations, seven-day+25% reserve, regional NASA winter radiation, cold panel voltage and estimated hot startup headroom are calculated. They are not measured system performance. Tank calibration/grid/fault simulations exercise real calculation code; they do not simulate the physical pressure transmitter, RF environment or battery chemistry. The outdoor±20mm depth target remains unverified and is not supported as an unconditional temperature-range claim.
 
-External dependencies: configured sensor quote/order drawing, owner/site geometry and operating levels, current supplier availability and component quotations, real hardware and traceable test instruments, HA/Thread commissioning environment and repository-creation access. Owner created the GitHub repository and supplied its URL; existence verified through the connector: https://github.com/Darksplat/solar-rainwater-tank-monitor (public). The owner explicitly approved public upload on 9 November 2026. Hosted validation evidence is recorded separately from local test evidence.
+## Awaiting hardware and supplied information
 
-Resume using progress.md. The next engineering gate is a fully selected protected circuit and approved component drawings, followed by complete KiCad schematic/PCB review. Do not purchase unqualified candidate parts from the partial BOM or represent prototype CAD as an IP-rated enclosure.
+The97-component board requires independent circuit/layout review, assembler land/stencil/DC-bias confirmation, current-limited prototype bring-up and stability/thermal/surge tests. The exact probe configuration and battery cold-charge/BMS version require supplier confirmation. Discontinued20W panel stock must be secured or the PV protection redesigned for a qualified replacement. Procurement is a consolidated list with explicit unpriced/unqualified entries, not a completed purchasing quotation.
+
+The cabinet and equipment CAD includes actual board geometry and stated commercial envelopes, a metal shelf/straps, spacers, exploded assembly and solar/post study. Vendor fixing patterns, cable diameters, probe dimensions, site wind/soil and load/ingress/condensation tests remain open. The cabinet manufacturer currently statesIP65; the assembled cabinet has no demonstrated rating. No tank drilling is authorized.
+
+Owner measurements are needed for internal tank dimensions, outlet/diaphragm/max-fill datums, cable route, shade. Real HA/Thread border-router access and physical devices are required for commissioning, RF/OTA/restart/alert tests. Real network credentials must remain local. No manufactured board, installed sensor, validated battery autonomy, calibrated litre measurement or live HA modification is claimed.
+
+## Reproduction entry points
+
+Start with README, assembly-guide, electrical-design, solar-power-design, mechanical-design, installation-guide, calibration-guide and testing-report. The progress register preserves open gates. Historical0.1 wiring/binaries are incompatible. The0.2 release directory contains only explicitly marked test-fixture images; build new images with independent owner secrets before use. GitHub publication and hosted validation are recorded separately with actual commit/run links.
+
+Owner configuration: both tanks supply the garden, one has secondary fire use, and no minimum-reserve display is requested. Catalogue height is 2.32 m; original 4 m height assumptions are superseded. The existing Raspberry Pi Zero2W/PoE/Sonoff radio already runs Thread and is to be retained. See site-configuration.md.

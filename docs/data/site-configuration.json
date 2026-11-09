@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-09",
+  "owner_confirmed": {
+    "use": "both garden; one secondary fire tank",
+    "minimum_reserve_display_requested": false,
+    "border_router_host": "Raspberry Pi Zero2W with PoE HAT",
+    "radio_mode": "already Thread"
+  },
+  "catalogue_reference": {
+    "url": "https://kingspanwatertanks.com.au/products/10000-litre-slimline-water-tank",
+    "external_length_mm": 4000,
+    "external_width_mm": 1150,
+    "external_height_mm": 2320,
+    "nominal_litres": 10000,
+    "delivered_internal_geometry_verified": false
+  },
+  "radio_reference": {
+    "asin": "B0G2LTBM1M",
+    "identified_family": "SONOFF Dongle-LMG21 / EFR32MG21",
+    "physical_identification_read": false,
+    "existing_network_changes_performed": false
+  },
+  "measurements_pending": [
+    "internal geometry or verified volume/depth pair",
+    "actual maximum water level",
+    "outlet/unusable-bottom datum",
+    "diaphragm elevation",
+    "cable route and shading"
+  ]
+}

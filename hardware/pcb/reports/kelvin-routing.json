@@ -1,0 +1,44 @@
+[
+  {
+    "filter": "R20",
+    "shunt": "R1",
+    "pin": "1",
+    "net": "BAT_FUSED",
+    "shared_power_track_outside_shunt_pad": false
+  },
+  {
+    "filter": "R21",
+    "shunt": "R1",
+    "pin": "2",
+    "net": "CHARGER_BAT",
+    "shared_power_track_outside_shunt_pad": false
+  },
+  {
+    "filter": "R30",
+    "shunt": "R2",
+    "pin": "1",
+    "net": "PV_IN",
+    "shared_power_track_outside_shunt_pad": false
+  },
+  {
+    "filter": "R31",
+    "shunt": "R2",
+    "pin": "2",
+    "net": "PV_OUT",
+    "shared_power_track_outside_shunt_pad": false
+  },
+  {
+    "filter": "R40",
+    "shunt": "R11",
+    "pin": "1",
+    "net": "BOOST18",
+    "shared_power_track_outside_shunt_pad": false
+  },
+  {
+    "filter": "R41",
+    "shunt": "R11",
+    "pin": "2",
+    "net": "LOOP_SHUNT_OUT",
+    "shared_power_track_outside_shunt_pad": false
+  }
+]

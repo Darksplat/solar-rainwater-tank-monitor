@@ -1,0 +1,132 @@
+- id: tank_1_battery_voltage_low
+  alias: Tank 1 battery voltage low
+  triggers:
+    - trigger: numeric_state
+      entity_id: sensor.tank_1_battery_voltage
+      below: 12.2
+      for: '00:10:00'
+  actions:
+    - action: persistent_notification.create
+      data:
+        notification_id: tank_1_battery_low
+        title: Tank 1 battery low
+        message: Battery voltage remained below 12.2 V. Check charge supply and battery condition.
+- id: tank_1_battery_soc_low
+  alias: Tank 1 synchronized battery SOC low
+  triggers:
+    - trigger: numeric_state
+      entity_id: sensor.tank_1_battery_percentage
+      below: 20
+      for: '00:10:00'
+  conditions:
+    - condition: state
+      entity_id: binary_sensor.tank_1_battery_soc_synchronized
+      state: 'on'
+  actions:
+    - action: persistent_notification.create
+      data:
+        notification_id: tank_1_battery_soc_low
+        title: Tank 1 battery reserve low
+        message: Synchronized coulomb-count estimate is below 20 percent. Verify charging.
+- id: tank_1_power_monitor_fault
+  alias: Tank 1 power monitor fault
+  triggers:
+    - trigger: template
+      value_template: >-
+        {{ is_state('binary_sensor.tank_1_battery_input_fault','on') or states('sensor.tank_1_battery_monitor_status') not in ['ok','unknown','unavailable'] or
+            states('sensor.tank_1_solar_monitor_status') not in ['ok','unknown','unavailable'] }}
+      for: '00:05:00'
+  actions:
+    - action: persistent_notification.create
+      data:
+        notification_id: tank_1_power_monitor_fault
+        title: Tank 1 power telemetry fault
+        message: Check I2C monitor diagnostics. Battery percentage requires resynchronization after counter faults.
+- id: tank_1_possible_solar_failure
+  alias: Tank 1 possible solar charging failure
+  triggers:
+    - trigger: template
+      value_template: >-
+        {{ state_attr('sun.sun','elevation')|float(-90) > 10 and
+            is_number(states('sensor.tank_1_battery_voltage')) and
+            is_number(states('sensor.tank_1_battery_current')) and
+            is_number(states('sensor.tank_1_solar_input_power')) and
+            states('sensor.tank_1_battery_voltage')|float < 13.2 and
+            states('sensor.tank_1_battery_current')|float > 0.02 and
+            states('sensor.tank_1_solar_input_power')|float < 1 }}
+      for: '02:00:00'
+  actions:
+    - action: persistent_notification.create
+      data:
+        notification_id: tank_1_possible_solar_failure
+        title: Tank 1 sustained low daytime solar input
+        message: >-
+          Battery is discharging with low solar power for two daylight hours.
+          Check clouds, shade, cabling, controller and BMS temperature inhibit.
+          This is a possible charging problem, not a proven charger fault.
+- id: tank_2_battery_voltage_low
+  alias: Tank 2 battery voltage low
+  triggers:
+    - trigger: numeric_state
+      entity_id: sensor.tank_2_battery_voltage
+      below: 12.2
+      for: '00:10:00'
+  actions:
+    - action: persistent_notification.create
+      data:
+        notification_id: tank_2_battery_low
+        title: Tank 2 battery low
+        message: Battery voltage remained below 12.2 V. Check charge supply and battery condition.
+- id: tank_2_battery_soc_low
+  alias: Tank 2 synchronized battery SOC low
+  triggers:
+    - trigger: numeric_state
+      entity_id: sensor.tank_2_battery_percentage
+      below: 20
+      for: '00:10:00'
+  conditions:
+    - condition: state
+      entity_id: binary_sensor.tank_2_battery_soc_synchronized
+      state: 'on'
+  actions:
+    - action: persistent_notification.create
+      data:
+        notification_id: tank_2_battery_soc_low
+        title: Tank 2 battery reserve low
+        message: Synchronized coulomb-count estimate is below 20 percent. Verify charging.
+- id: tank_2_power_monitor_fault
+  alias: Tank 2 power monitor fault
+  triggers:
+    - trigger: template
+      value_template: >-
+        {{ is_state('binary_sensor.tank_2_battery_input_fault','on') or states('sensor.tank_2_battery_monitor_status') not in ['ok','unknown','unavailable'] or
+            states('sensor.tank_2_solar_monitor_status') not in ['ok','unknown','unavailable'] }}
+      for: '00:05:00'
+  actions:
+    - action: persistent_notification.create
+      data:
+        notification_id: tank_2_power_monitor_fault
+        title: Tank 2 power telemetry fault
+        message: Check I2C monitor diagnostics. Battery percentage requires resynchronization after counter faults.
+- id: tank_2_possible_solar_failure
+  alias: Tank 2 possible solar charging failure
+  triggers:
+    - trigger: template
+      value_template: >-
+        {{ state_attr('sun.sun','elevation')|float(-90) > 10 and
+            is_number(states('sensor.tank_2_battery_voltage')) and
+            is_number(states('sensor.tank_2_battery_current')) and
+            is_number(states('sensor.tank_2_solar_input_power')) and
+            states('sensor.tank_2_battery_voltage')|float < 13.2 and
+            states('sensor.tank_2_battery_current')|float > 0.02 and
+            states('sensor.tank_2_solar_input_power')|float < 1 }}
+      for: '02:00:00'
+  actions:
+    - action: persistent_notification.create
+      data:
+        notification_id: tank_2_possible_solar_failure
+        title: Tank 2 sustained low daytime solar input
+        message: >-
+          Battery is discharging with low solar power for two daylight hours.
+          Check clouds, shade, cabling, controller and BMS temperature inhibit.
+          This is a possible charging problem, not a proven charger fault.

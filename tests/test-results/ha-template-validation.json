@@ -1,0 +1,7 @@
+{
+  "date": "2026-11-09",
+  "jinja_scenario_assertions": 24,
+  "unique_automation_ids": 22,
+  "status": "PASS expression fixtures only",
+  "HA_runtime": "not tested"
+}

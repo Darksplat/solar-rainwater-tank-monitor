@@ -1,0 +1,223 @@
+{
+  "status": "packaging study, not manufacturing release",
+  "clearance_intersection_volumes_mm3": {
+    "BatteryReference__ChargerReference": 0.0,
+    "BatteryReference__RoutedPCB": 0.0,
+    "ChargerReference__RoutedPCB": 0.0,
+    "RoutedPCB__CabinetReference": 0.0,
+    "BatteryReference__CabinetReference": 0.0,
+    "BatteryReference__BatteryProtectReference": 0.0,
+    "BatteryProtectReference__CabinetReference": 0.0,
+    "ServiceBackplate__AntennaMetalKeepout": 0.0
+  },
+  "objects": {
+    "CabinetReference": {
+      "valid": true,
+      "volume_mm3": 2014500.0,
+      "bounds_mm": [
+        0.0,
+        0.0,
+        0.0,
+        300.0,
+        400.0,
+        210.0
+      ],
+      "role": "Fibox ARCA403021S external 300W x400H x210D; 5mm walls are illustrative, not vendor geometry"
+    },
+    "ServiceBackplate": {
+      "valid": true,
+      "volume_mm3": 341874.6000446137,
+      "bounds_mm": [
+        25.0,
+        25.0,
+        12.0,
+        275.0,
+        375.0,
+        16.0
+      ],
+      "role": "250x350x4 aluminum; mounting to cabinet boss pattern unresolved"
+    },
+    "BatteryShelf": {
+      "valid": true,
+      "volume_mm3": 55666.042076074984,
+      "bounds_mm": [
+        40.0,
+        50.0,
+        16.0,
+        250.0,
+        90.0,
+        111.0
+      ],
+      "role": "2mm aluminum bent shelf; proof load and restraint test required"
+    },
+    "BatteryReference": {
+      "valid": true,
+      "volume_mm3": 2327479.0,
+      "bounds_mm": [
+        54.5,
+        52.0,
+        20.0,
+        235.5,
+        219.0,
+        97.0
+      ],
+      "role": "Victron BAT512020705 reference 181W x167H x77D; terminals/tool keepout above"
+    },
+    "ChargerReference": {
+      "valid": true,
+      "volume_mm3": 451999.99999999994,
+      "bounds_mm": [
+        27.0,
+        251.0,
+        20.0,
+        140.0,
+        351.0,
+        60.0
+      ],
+      "role": "SmartSolar 75/10 reference envelope; actual mounting-hole drawing required"
+    },
+    "BatteryProtectReference": {
+      "valid": true,
+      "volume_mm3": 203520.0,
+      "bounds_mm": [
+        240.0,
+        80.0,
+        20.0,
+        288.0,
+        186.0,
+        60.0
+      ],
+      "role": "BPR065022000 rotated installation envelope 48W x106H x40D; vendor fixing pattern pending"
+    },
+    "RoutedPCB": {
+      "valid": true,
+      "volume_mm3": 21371.284569233816,
+      "bounds_mm": [
+        145.0,
+        250.0,
+        26.0,
+        275.0,
+        360.0,
+        27.51
+      ],
+      "role": "Actual KiCad board outline 130x110x1.6; component envelopes are separate"
+    },
+    "BatteryTerminalServiceKeepout": {
+      "valid": true,
+      "volume_mm3": 384625.0,
+      "bounds_mm": [
+        54.5,
+        219.0,
+        18.0,
+        235.5,
+        244.0,
+        103.0
+      ],
+      "role": "25mm terminal service clearance; verify actual terminal position"
+    },
+    "AntennaMetalKeepout": {
+      "valid": true,
+      "volume_mm3": 114000.0,
+      "bounds_mm": [
+        185.0,
+        337.0,
+        0.0,
+        235.0,
+        375.0,
+        60.0
+      ],
+      "role": "No metal in this reference volume; plastic cabinet allowed; RF validation required"
+    },
+    "CableDuctEnvelope": {
+      "valid": true,
+      "volume_mm3": 111600.0,
+      "bounds_mm": [
+        5.0,
+        45.0,
+        20.0,
+        23.0,
+        355.0,
+        40.0
+      ],
+      "role": "Cable route envelope only; no commercial duct selected"
+    },
+    "PCBSpacer1": {
+      "valid": true,
+      "volume_mm3": 202.31856689118285,
+      "bounds_mm": [
+        146.0,
+        353.0,
+        16.0,
+        152.0,
+        359.0,
+        26.0
+      ],
+      "role": "M3 10mm spacer; holes match routed PCB"
+    },
+    "PCBSpacer2": {
+      "valid": true,
+      "volume_mm3": 202.3185668911825,
+      "bounds_mm": [
+        268.0,
+        353.0,
+        16.0,
+        274.0,
+        359.0,
+        26.0
+      ],
+      "role": "M3 10mm spacer; holes match routed PCB"
+    },
+    "PCBSpacer3": {
+      "valid": true,
+      "volume_mm3": 202.3185668911829,
+      "bounds_mm": [
+        146.0,
+        251.0,
+        16.0,
+        152.0,
+        257.0,
+        26.0
+      ],
+      "role": "M3 10mm spacer; holes match routed PCB"
+    },
+    "PCBSpacer4": {
+      "valid": true,
+      "volume_mm3": 202.3185668911825,
+      "bounds_mm": [
+        268.0,
+        273.0,
+        16.0,
+        274.0,
+        279.0,
+        26.0
+      ],
+      "role": "M3 10mm spacer; holes match routed PCB"
+    },
+    "BatteryStrap1": {
+      "valid": true,
+      "volume_mm3": 19999.999999999978,
+      "bounds_mm": [
+        78.0,
+        50.0,
+        18.0,
+        98.0,
+        221.0,
+        101.0
+      ],
+      "role": "20mm webbing envelope; stainless buckle, rated restraints selected at procurement"
+    },
+    "BatteryStrap2": {
+      "valid": true,
+      "volume_mm3": 19999.999999999978,
+      "bounds_mm": [
+        192.0,
+        50.0,
+        18.0,
+        212.0,
+        221.0,
+        101.0
+      ],
+      "role": "20mm webbing envelope; stainless buckle, rated restraints selected at procurement"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "date": "2026-11-09",
+  "consolidated_rows": 73,
+  "known_listed_subtotal_AUD": 549.26,
+  "subtotal_is_not_project_total": true,
+  "unpriced_rows": 40,
+  "shipping": "unknown; no address or checkout quote used",
+  "prototype_costs": "existing 0.1 DevKit exploration separate; not required in custom-PCB production BOM",
+  "assembly_and_tooling": "quote required; no fabricated estimate"
+}
