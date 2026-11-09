@@ -1,0 +1,7 @@
+.venv*/
+.esphome/
+__pycache__/
+firmware/secrets.yaml
+*.log
+.DS_Store
+**/secrets.yaml

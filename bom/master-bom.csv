@@ -1,0 +1,16 @@
+stage,manufacturer,part_number,quantity_two_units,supplier,product_url,unit_price_AUD,price_basis,availability_observed,datasheet_url,alternative,status
+prototype,Espressif,ESP32-C6-DevKitC-1-N8,2,Core Electronics,https://core-electronics.com.au/esp32-c6-devkitc-1-n8-8mb-spi-flash.html,27.05,inc GST,stock shown; recheck checkout,https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32c6/esp32-c6-devkitc-1/index.html,DFR1054 same board listed out of stock,candidate
+production,Espressif,ESP32-C6-WROOM-1-N8,2,DigiKey AU,https://www.digikey.com.au/en/products/detail/espressif-systems/ESP32-C6-WROOM-1-N8/17728866,8.08,ex GST,1435 shown; cached page,https://www.espressif.com/sites/default/files/documentation/esp32-c6-wroom-1_wroom-1u_datasheet_en.pdf,Mouser AU same part,candidate footprint not verified
+both,WIKA,LH-10 configured 0-0.6bar 4-20mA PUR 10m,2,WIKA Australia,https://www.wika.com/en-au/lh_10.WIKA,,quote required,unknown,https://www.wika.com/media/Data-sheets/Level/Submersible-pressure-sensors/ds_pe8109_en_co.pdf,50kPa variant only if manufacturer confirms,configured order code outstanding
+both,Powertech,ZM9056,2,Jaycar,https://www.jaycar.com.au/12v-40w-monocrystalline-solar-panel/p/ZM9056,119,GST basis check supplier,delivery listed,https://www.jaycar.com.au/12v-40w-monocrystalline-solar-panel/p/ZM9056,higher-voltage panel for MPPT startup margin,candidate; 17.2V Vmp needs compatibility review
+both,Victron,BAT512020705,2,Batteries Direct,https://batteriesdirect.com.au/shop/product/35244/lfp-lsp12.8/20.html,,quote required,call supplier,,qualified low-temperature protected 20Ah 4S pack,candidate; current datasheet required
+both,Victron,SmartSolar MPPT 75/10,2,not selected,,,quote required,unknown,https://www.victronenergy.com/media/pg/Manual_SmartSolar_MPPT_75-10_up_to_100-20/en/technical-specifications.html,lower standby lithium solar controller,candidate; panel compatibility unresolved
+production,Texas Instruments,ADS1115IDGSR,2,not selected,,,unknown,unknown,https://www.ti.com/lit/ds/symlink/ads1115.pdf,protected industrial loop receiver + ADC,package/order variant sourcing pending
+both,unselected,precision 100R 0.05% 10ppm >=0.25W,2,unselected,,,unknown,unknown,,qualified precision resistor,pending
+production,unselected,3.3V regulator,2,unselected,,,unknown,unknown,,,pending
+production,unselected,switched 24V regulator and protected receiver,2,unselected,,,unknown,unknown,,,pending
+both,unselected,battery shunt fuel gauge and PV monitoring,2,unselected,,,unknown,unknown,,,pending
+both,unselected,UV-rated enclosure glands vent and desiccant,2,unselected,,,unknown,unknown,,,pending
+both,unselected,DC fuse holders reverse protection connectors wiring,2,unselected,,,unknown,unknown,,,pending
+both,unselected,panel bracket battery strap and suspension kit,2,unselected,,,unknown,unknown,,,pending
+production,unselected,PCB and assembly,2,JLCPCB or PCBWay,,,quote after design release,unknown,,,not ready for quote

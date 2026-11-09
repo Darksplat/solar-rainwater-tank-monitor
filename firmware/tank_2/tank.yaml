@@ -1,0 +1,8 @@
+substitutions:
+  device_name: tank-2
+  friendly_name: Tank 2
+  api_encryption_key: !secret api_key
+  ota_secret: !secret ota_password
+  thread_operational_dataset: !secret thread_dataset
+packages:
+  common: !include ../common/base.yaml

@@ -1,0 +1,15 @@
+test_invalid (test_calibration.CalibrationTest.test_invalid) ... ok
+test_known_coefficients (test_calibration.CalibrationTest.test_known_coefficients) ... ok
+test_10w_deficit (test_power.PowerTests.test_10w_deficit) ... ok
+test_20w_surplus (test_power.PowerTests.test_20w_surplus) ... ok
+test_autonomy (test_power.PowerTests.test_autonomy) ... ok
+test_continuous_sensor (test_power.PowerTests.test_continuous_sensor) ... ok
+test_infinite_input (test_power.PowerTests.test_infinite_input) ... ok
+test_invalid (test_power.PowerTests.test_invalid) ... ok
+test_no_sun (test_power.PowerTests.test_no_sun) ... ok
+test_small_panel_deficit (test_power.PowerTests.test_small_panel_deficit) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+OK

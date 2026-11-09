@@ -1,0 +1,9 @@
+reference,from,to,status
+U1,GPIO6,ADS1115 SDA,proposed
+U1,GPIO7,ADS1115 SCL,proposed
+U1,GPIO10,24V loop power driver enable,driver unselected
+U2,ADDR,GND,proposed address 0x48
+U2,A0,protected 100R shunt sense,protection incomplete
+TX1,U+,switched 24V,verify supplied colour code
+TX1,U-,100R shunt high side,verify supplied colour code
+R1,shunt low side,GND,proposed

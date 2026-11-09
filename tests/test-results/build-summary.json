@@ -1,0 +1,40 @@
+{
+  "tank_1": {
+    "configuration_valid": true,
+    "compiled": true,
+    "esphome": "2026.10.2",
+    "esp_idf": "5.5.6",
+    "target": "esp32c6",
+    "tested_on_hardware": false,
+    "public_test_credentials": true,
+    "artifacts": {
+      "tank-1.factory.TEST-ONLY.bin": {
+        "bytes": 802880,
+        "sha256": "b6c05f1e018cb25ebf20eaf84a42bab8b3abfc14eb4c67fe69e8404e4216bbfa"
+      },
+      "tank-1.ota.TEST-ONLY.bin": {
+        "bytes": 737344,
+        "sha256": "361aa34845c18366373e36cd71b2e934ee3acdfba0600a290a856dd311376213"
+      }
+    }
+  },
+  "tank_2": {
+    "configuration_valid": true,
+    "compiled": true,
+    "esphome": "2026.10.2",
+    "esp_idf": "5.5.6",
+    "target": "esp32c6",
+    "tested_on_hardware": false,
+    "public_test_credentials": true,
+    "artifacts": {
+      "tank-2.factory.TEST-ONLY.bin": {
+        "bytes": 802880,
+        "sha256": "0fda02fcc8a8c3108604cf1bb3a909cc03db53d71655529f7a3b96163bc931e5"
+      },
+      "tank-2.ota.TEST-ONLY.bin": {
+        "bytes": 737344,
+        "sha256": "0578b4ec37bf414273816866be25d20a66ae32d32db17c515fa179aed40b29e4"
+      }
+    }
+  }
+}

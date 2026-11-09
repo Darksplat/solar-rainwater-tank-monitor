@@ -1,0 +1,35 @@
+from pathlib import Path
+from PIL import Image,ImageDraw,ImageFont
+p=Path(__file__).resolve().parents[1]
+im=Image.new('RGB',(1500,850),'#f5f7fa');d=ImageDraw.Draw(im)
+def font(s):return ImageFont.truetype('/System/Library/Fonts/Supplemental/Arial.ttf',s)
+def box(x,y,w,h,title,sub):
+ d.rounded_rectangle((x,y,x+w,y+h),12,fill='#e1edf3',outline='#41677b',width=2)
+ d.text((x+15,y+13),title,font=font(23),fill='#19394a');d.text((x+15,y+50),sub,font=font(17),fill='#405b68')
+def arrow(a,b,label=''):
+ d.line([a,b],fill='#446675',width=4)
+ import math
+ t=math.atan2(b[1]-a[1],b[0]-a[0]);d.polygon([b,(b[0]-12*math.cos(t-0.4),b[1]-12*math.sin(t-0.4)),(b[0]-12*math.cos(t+0.4),b[1]-12*math.sin(t+0.4))],fill='#446675')
+ if label:d.text(((a[0]+b[0])/2-45,(a[1]+b[1])/2-30),label,font=font(17),fill='#405b68')
+d.text((50,30),'Two independent solar tank nodes',font=font(34),fill='#19394a')
+d.text((50,80),'Repeat the complete power and sensing chain for Tank 1 and Tank 2',font=font(21),fill='#405b68')
+box(50,150,260,100,'PV panel','40 W provisional; voltage review')
+box(405,150,290,100,'Lithium solar charger','Battery temperature cutoff')
+box(800,150,285,100,'4S LiFePO4 + BMS','20 Ah provisional; fused load')
+arrow((310,200),(405,200));arrow((695,200),(800,200))
+box(800,340,285,100,'Protected 3.3 V supply','ESP32-C6 + ADS1115')
+arrow((940,250),(940,340))
+box(50,340,290,100,'Switched 24 V supply','Loop compliance and protection')
+arrow((800,270),(195,270));arrow((195,270),(195,340))
+box(50,530,290,100,'Vented pressure probe','Dry atmospheric tube termination')
+arrow((195,440),(195,530))
+box(430,530,290,100,'Protected loop receiver','100 ohm shunt; protection open')
+arrow((340,580),(430,580),'4–20 mA')
+arrow((720,580),(940,440),'ADC input')
+box(1150,340,290,100,'Thread MTD','5 s polls; CPU load unverified')
+arrow((1085,390),(1150,390))
+box(1150,530,290,100,'Border router → HA','IPv6 + encrypted ESPHome API')
+arrow((1295,440),(1295,530))
+d.text((50,735),'Engineering block diagram — not a completed wiring schematic',font=font(24),fill='#97651b')
+d.text((50,780),'No shared battery between tanks • no tank structural drilling • no manufacturing release',font=font(21),fill='#405b68')
+im.save(p/'hardware/wiring/architecture.png')

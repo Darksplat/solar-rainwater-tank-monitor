@@ -1,0 +1,60 @@
+title: Rainwater
+views:
+  - title: Tanks
+    path: tanks
+    cards:
+      - type: markdown
+        content: >-
+          ## Rainwater reserve
+          Volumes require verified calibration. Signed water change includes rainfall,
+          filling and withdrawal. Battery and solar telemetry await the power hardware.
+      - type: entities
+        entities:
+          - sensor.combined_water_remaining
+          - sensor.combined_water_capacity
+      - type: horizontal-stack
+        cards:
+          - type: gauge
+            entity: sensor.tank_1_water_percentage
+            name: Tank 1
+            min: 0
+            max: 100
+            severity: {red: 0, yellow: 25, green: 50}
+          - type: gauge
+            entity: sensor.tank_2_water_percentage
+            name: Tank 2
+            min: 0
+            max: 100
+            severity: {red: 0, yellow: 25, green: 50}
+      - type: entities
+        title: Tank 1
+        entities:
+          - sensor.tank_1_remaining_litres
+          - sensor.tank_1_water_depth
+          - sensor.tank_1_sensor_status
+          - binary_sensor.tank_1_wireless_connection
+      - type: entities
+        title: Tank 2
+        entities:
+          - sensor.tank_2_remaining_litres
+          - sensor.tank_2_water_depth
+          - sensor.tank_2_sensor_status
+          - binary_sensor.tank_2_wireless_connection
+      - type: history-graph
+        title: Daily water levels
+        hours_to_show: 24
+        entities:
+          - sensor.tank_1_remaining_litres
+          - sensor.tank_2_remaining_litres
+      - type: history-graph
+        title: Weekly water trends
+        hours_to_show: 168
+        entities:
+          - sensor.tank_1_remaining_litres
+          - sensor.tank_2_remaining_litres
+      - type: history-graph
+        title: Signed net change — not consumption
+        hours_to_show: 24
+        entities:
+          - sensor.tank_1_net_water_change
+          - sensor.tank_2_net_water_change

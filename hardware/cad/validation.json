@@ -1,0 +1,37 @@
+{
+  "TrayMountHole3": {
+    "valid": true,
+    "volume_mm3": 64617.53629867949,
+    "solids": 1
+  },
+  "PCBEnvelope": {
+    "valid": true,
+    "volume_mm3": 7680.0,
+    "solids": 1
+  },
+  "CageSuspension1": {
+    "valid": true,
+    "volume_mm3": 89161.90261289474,
+    "solids": 1
+  },
+  "Standoff0": {
+    "valid": true,
+    "volume_mm3": 370.67651719705975,
+    "solids": 1
+  },
+  "Standoff1": {
+    "valid": true,
+    "volume_mm3": 370.67651719705987,
+    "solids": 1
+  },
+  "Standoff2": {
+    "valid": true,
+    "volume_mm3": 370.67651719705964,
+    "solids": 1
+  },
+  "Standoff3": {
+    "valid": true,
+    "volume_mm3": 370.67651719705975,
+    "solids": 1
+  }
+}

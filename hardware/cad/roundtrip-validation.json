@@ -1,0 +1,44 @@
+{
+  "Standoff3": {
+    "STEP_valid": true,
+    "volume_difference_mm3": -1.1368683772161603e-13,
+    "STL_closed": true,
+    "facets": 1008
+  },
+  "CageSuspension1": {
+    "STEP_valid": true,
+    "volume_difference_mm3": -2.3283064365386963e-10,
+    "STL_closed": true,
+    "facets": 1596
+  },
+  "Standoff2": {
+    "STEP_valid": true,
+    "volume_difference_mm3": 0.0,
+    "STL_closed": true,
+    "facets": 1008
+  },
+  "PCBEnvelope": {
+    "STEP_valid": true,
+    "volume_difference_mm3": 0.0,
+    "STL_closed": true,
+    "facets": 12
+  },
+  "Standoff1": {
+    "STEP_valid": true,
+    "volume_difference_mm3": -1.1368683772161603e-13,
+    "STL_closed": true,
+    "facets": 1008
+  },
+  "TrayMountHole3": {
+    "STEP_valid": true,
+    "volume_difference_mm3": 0.0,
+    "STL_closed": true,
+    "facets": 2044
+  },
+  "Standoff0": {
+    "STEP_valid": true,
+    "volume_difference_mm3": -5.684341886080802e-14,
+    "STL_closed": true,
+    "facets": 1008
+  }
+}

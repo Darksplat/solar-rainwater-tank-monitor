@@ -1,0 +1,294 @@
+esphome:
+  name: ${device_name}
+  friendly_name: ${friendly_name}
+  includes:
+    - tank_core.h
+esp32:
+  board: esp32-c6-devkitc-1
+  framework:
+    type: esp-idf
+logger:
+api:
+  encryption:
+    key: ${api_encryption_key}
+  reboot_timeout: 0s
+ota:
+  - platform: esphome
+    password: ${ota_secret}
+network:
+  enable_ipv6: true
+openthread:
+  device_type: MTD
+  tlv: ${thread_operational_dataset}
+  poll_period: 5s
+i2c:
+  sda: GPIO6
+  scl: GPIO7
+  scan: true
+ads1115:
+  - address: 0x48
+switch:
+  - platform: gpio
+    id: loop_power
+    pin: GPIO10
+    internal: true
+    restore_mode: ALWAYS_OFF
+  - platform: template
+    name: Calibration enabled
+    id: calibrated
+    optimistic: true
+    restore_mode: RESTORE_DEFAULT_OFF
+  - platform: template
+    name: Manufacturer calibration method
+    id: manufacturer_method
+    optimistic: true
+    restore_mode: RESTORE_DEFAULT_OFF
+number:
+  - platform: template
+    name: Internal length
+    id: length_m
+    unit_of_measurement: m
+    min_value: 0
+    max_value: 20
+    step: 0.001
+    initial_value: 0
+    optimistic: true
+    restore_value: true
+  - platform: template
+    name: Internal width
+    id: width_m
+    unit_of_measurement: m
+    min_value: 0
+    max_value: 20
+    step: 0.001
+    initial_value: 0
+    optimistic: true
+    restore_value: true
+  - platform: template
+    name: Maximum operating level
+    id: maximum_m
+    unit_of_measurement: m
+    min_value: 0.1
+    max_value: 6
+    step: 0.001
+    initial_value: 3.85
+    optimistic: true
+    restore_value: true
+  - platform: template
+    name: Usable depth
+    id: usable_m
+    unit_of_measurement: m
+    min_value: 0.1
+    max_value: 6
+    step: 0.001
+    initial_value: 3.8
+    optimistic: true
+    restore_value: true
+  - platform: template
+    name: Diaphragm height
+    id: diaphragm_m
+    unit_of_measurement: m
+    min_value: 0
+    max_value: 1
+    step: 0.001
+    initial_value: 0.05
+    optimistic: true
+    restore_value: true
+  - platform: template
+    name: Rated capacity
+    id: rated_l
+    unit_of_measurement: L
+    min_value: 1
+    max_value: 100000
+    step: 1
+    initial_value: 10000
+    optimistic: true
+    restore_value: true
+  - platform: template
+    name: Verified reference volume
+    id: verified_l
+    unit_of_measurement: L
+    min_value: 0
+    max_value: 100000
+    step: 1
+    initial_value: 0
+    optimistic: true
+    restore_value: true
+  - platform: template
+    name: Reference water depth
+    id: reference_m
+    unit_of_measurement: m
+    min_value: 0
+    max_value: 6
+    step: 0.001
+    initial_value: 0
+    optimistic: true
+    restore_value: true
+  - platform: template
+    name: Zero current
+    id: zero_ma
+    unit_of_measurement: mA
+    min_value: 3.6
+    max_value: 4.4
+    step: 0.001
+    initial_value: 4
+    optimistic: true
+    restore_value: true
+  - platform: template
+    name: Span current
+    id: span_ma
+    unit_of_measurement: mA
+    min_value: 15
+    max_value: 17
+    step: 0.001
+    initial_value: 16
+    optimistic: true
+    restore_value: true
+sensor:
+  - platform: ads1115
+    id: loop_adc
+    multiplexer: A0_GND
+    gain: 4.096
+    update_interval: never
+    internal: true
+  - platform: template
+    name: Loop current
+    id: current_ma
+    unit_of_measurement: mA
+    accuracy_decimals: 3
+    update_interval: never
+  - platform: template
+    name: Water depth
+    id: water_depth
+    unit_of_measurement: m
+    accuracy_decimals: 3
+    state_class: measurement
+    update_interval: never
+  - platform: template
+    name: Remaining litres
+    id: remaining
+    unit_of_measurement: L
+    accuracy_decimals: 0
+    state_class: measurement
+    update_interval: never
+  - platform: template
+    name: Total contained litres
+    id: contained
+    unit_of_measurement: L
+    accuracy_decimals: 0
+    state_class: measurement
+    update_interval: never
+  - platform: template
+    name: Water percentage
+    id: percentage
+    unit_of_measurement: '%'
+    accuracy_decimals: 1
+    state_class: measurement
+    update_interval: never
+  - platform: template
+    name: Usable capacity
+    id: capacity
+    unit_of_measurement: L
+    accuracy_decimals: 0
+    update_interval: never
+  - platform: template
+    name: Pressure
+    id: pressure
+    unit_of_measurement: kPa
+    accuracy_decimals: 3
+    state_class: measurement
+    update_interval: never
+  - platform: template
+    name: Last successful measurement uptime
+    id: last_success
+    unit_of_measurement: s
+    accuracy_decimals: 0
+    update_interval: never
+  - platform: uptime
+    name: Uptime
+  - platform: template
+    name: Measurement sequence
+    id: sequence
+    accuracy_decimals: 0
+    update_interval: never
+text_sensor:
+  - platform: template
+    name: Sensor status
+    id: sensor_status
+    update_interval: never
+binary_sensor:
+  - platform: status
+    name: Wireless connection
+button:
+  - platform: restart
+    name: Restart
+  - platform: template
+    name: Enable OTA for ten minutes
+    on_press:
+      - script.execute: ota_window
+script:
+  - id: ota_window
+    mode: restart
+    then:
+      - openthread.set_poll_period: 0s
+      - delay: 10min
+      - openthread.set_poll_period: 5s
+  - id: measure
+    mode: single
+    then:
+      - switch.turn_on: loop_power
+      - delay: 5s
+      - lambda: |-
+          id(sample_index) = 0;
+      - repeat:
+          count: 9
+          then:
+            - component.update: loop_adc
+            - delay: 100ms
+            - lambda: |-
+                id(samples)[id(sample_index)++] = id(loop_adc).state * 10.0f;
+      - switch.turn_off: loop_power
+      - lambda: |-
+          tank::Calibration c;
+          c.enabled=id(calibrated).state;
+          c.manufacturer_method=id(manufacturer_method).state;
+          c.length=id(length_m).state; c.width=id(width_m).state;
+          c.max_level=id(maximum_m).state; c.usable_depth=id(usable_m).state;
+          c.diaphragm=id(diaphragm_m).state; c.rated_litres=id(rated_l).state;
+          c.verified_litres=id(verified_l).state; c.reference_depth=id(reference_m).state;
+          c.zero_ma=id(zero_ma).state; c.span_ma=id(span_ma).state;
+          tank::Status fault=tank::Status::ok;
+          for(float v:id(samples)) {
+            auto s=tank::loop_status(v);
+            if(s!=tank::Status::ok) {fault=s; break;}
+          }
+          float ma=tank::robust_current(id(samples));
+          auto r=tank::calculate(ma,c);
+          if(fault!=tank::Status::ok) r.status=fault;
+          else if(!std::isfinite(ma)) r.status=tank::Status::unstable;
+          id(current_ma).publish_state(ma);
+          id(pressure).publish_state(std::isfinite(ma) ? (ma-c.zero_ma)/c.span_ma*c.pressure_pa/1000 : NAN);
+          if (r.status==tank::Status::ok) id(last_success).publish_state(millis()/1000.0f);
+          id(sensor_status).publish_state(tank::status_text(r.status));
+          id(water_depth).publish_state(r.depth);
+          id(remaining).publish_state(r.usable_litres);
+          id(contained).publish_state(r.total_litres);
+          id(percentage).publish_state(r.percent);
+          id(capacity).publish_state(r.capacity);
+          id(sequence_count)++;
+          id(sequence).publish_state(id(sequence_count));
+globals:
+  - id: samples
+    type: std::array<float,9>
+    initial_value: 'std::array<float,9>{}'
+  - id: sample_index
+    type: int
+    initial_value: '0'
+  - id: sequence_count
+    type: uint32_t
+    initial_value: '0'
+interval:
+  - interval: 300s
+    startup_delay: 10s
+    then:
+      - script.execute: measure

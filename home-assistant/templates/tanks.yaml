@@ -1,0 +1,21 @@
+# Merge under template: using !include, or add as a package under template.
+- sensor:
+    - name: Combined water remaining
+      unique_id: combined_tank_water_remaining
+      unit_of_measurement: L
+      state_class: measurement
+      availability: >-
+        {{ is_number(states('sensor.tank_1_remaining_litres')) and
+           is_number(states('sensor.tank_2_remaining_litres')) }}
+      state: >-
+        {{ (states('sensor.tank_1_remaining_litres')|float +
+            states('sensor.tank_2_remaining_litres')|float)|round(0) }}
+    - name: Combined water capacity
+      unique_id: combined_tank_water_capacity
+      unit_of_measurement: L
+      availability: >-
+        {{ is_number(states('sensor.tank_1_usable_capacity')) and
+           is_number(states('sensor.tank_2_usable_capacity')) }}
+      state: >-
+        {{ (states('sensor.tank_1_usable_capacity')|float +
+            states('sensor.tank_2_usable_capacity')|float)|round(0) }}

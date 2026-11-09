@@ -1,0 +1,184 @@
+- id: tank_1_below_50
+  alias: Tank 1 below 50 percent
+  triggers:
+    - trigger: numeric_state
+      entity_id: sensor.tank_1_water_percentage
+      below: 50
+      for: '00:10:00'
+  actions:
+    - action: persistent_notification.create
+      data:
+        notification_id: tank_1_below_50
+        title: Tank 1 water alert
+        message: Water remained below 50% for ten minutes.
+- id: tank_1_below_25
+  alias: Tank 1 below 25 percent
+  triggers:
+    - trigger: numeric_state
+      entity_id: sensor.tank_1_water_percentage
+      below: 25
+      for: '00:10:00'
+  actions:
+    - action: persistent_notification.create
+      data:
+        notification_id: tank_1_below_25
+        title: Tank 1 water alert
+        message: Water remained below 25% for ten minutes.
+- id: tank_1_below_10
+  alias: Tank 1 below 10 percent
+  triggers:
+    - trigger: numeric_state
+      entity_id: sensor.tank_1_water_percentage
+      below: 10
+      for: '00:10:00'
+  actions:
+    - action: persistent_notification.create
+      data:
+        notification_id: tank_1_below_10
+        title: Tank 1 water alert
+        message: Water remained below 10% for ten minutes.
+- id: tank_1_sensor_fault
+  alias: Tank 1 sensor fault
+  triggers:
+    - trigger: template
+      value_template: >-
+        {{ states('sensor.tank_1_sensor_status') not in ['ok', 'unknown', 'unavailable'] }}
+      for: '00:10:00'
+  actions:
+    - action: persistent_notification.create
+      data:
+        notification_id: tank_1_sensor_fault
+        title: Tank 1 sensor fault
+        message: Check sensor diagnostics and calibration before relying on volume.
+- id: tank_1_stale
+  alias: Tank 1 measurement stale
+  triggers:
+    - trigger: template
+      value_template: >-
+        {{ not is_number(states('sensor.tank_1_measurement_sequence')) or
+            (as_timestamp(now()) - as_timestamp(states.sensor.tank_1_measurement_sequence.last_updated)) > 900 }}
+      for: '00:05:00'
+  actions:
+    - action: persistent_notification.create
+      data:
+        notification_id: tank_1_stale
+        title: Tank 1 communication or measurement failure
+        message: No current measurements. Check power, Thread connectivity and sensor task.
+- id: tank_1_filling
+  alias: Tank 1 filling detected
+  triggers:
+    - trigger: numeric_state
+      entity_id: sensor.tank_1_net_water_change
+      above: 300
+      for: '00:10:00'
+  actions:
+    - action: persistent_notification.create
+      data:
+        notification_id: tank_1_filling
+        title: Tank 1 water change
+        message: Positive net level change detected; possible rainfall or filling.
+- id: tank_1_drop
+  alias: Tank 1 drop detected
+  triggers:
+    - trigger: numeric_state
+      entity_id: sensor.tank_1_net_water_change
+      below: -300
+      for: '00:10:00'
+  actions:
+    - action: persistent_notification.create
+      data:
+        notification_id: tank_1_drop
+        title: Tank 1 water change
+        message: Large negative net level change detected; inspect for use or leakage.
+- id: tank_2_below_50
+  alias: Tank 2 below 50 percent
+  triggers:
+    - trigger: numeric_state
+      entity_id: sensor.tank_2_water_percentage
+      below: 50
+      for: '00:10:00'
+  actions:
+    - action: persistent_notification.create
+      data:
+        notification_id: tank_2_below_50
+        title: Tank 2 water alert
+        message: Water remained below 50% for ten minutes.
+- id: tank_2_below_25
+  alias: Tank 2 below 25 percent
+  triggers:
+    - trigger: numeric_state
+      entity_id: sensor.tank_2_water_percentage
+      below: 25
+      for: '00:10:00'
+  actions:
+    - action: persistent_notification.create
+      data:
+        notification_id: tank_2_below_25
+        title: Tank 2 water alert
+        message: Water remained below 25% for ten minutes.
+- id: tank_2_below_10
+  alias: Tank 2 below 10 percent
+  triggers:
+    - trigger: numeric_state
+      entity_id: sensor.tank_2_water_percentage
+      below: 10
+      for: '00:10:00'
+  actions:
+    - action: persistent_notification.create
+      data:
+        notification_id: tank_2_below_10
+        title: Tank 2 water alert
+        message: Water remained below 10% for ten minutes.
+- id: tank_2_sensor_fault
+  alias: Tank 2 sensor fault
+  triggers:
+    - trigger: template
+      value_template: >-
+        {{ states('sensor.tank_2_sensor_status') not in ['ok', 'unknown', 'unavailable'] }}
+      for: '00:10:00'
+  actions:
+    - action: persistent_notification.create
+      data:
+        notification_id: tank_2_sensor_fault
+        title: Tank 2 sensor fault
+        message: Check sensor diagnostics and calibration before relying on volume.
+- id: tank_2_stale
+  alias: Tank 2 measurement stale
+  triggers:
+    - trigger: template
+      value_template: >-
+        {{ not is_number(states('sensor.tank_2_measurement_sequence')) or
+            (as_timestamp(now()) - as_timestamp(states.sensor.tank_2_measurement_sequence.last_updated)) > 900 }}
+      for: '00:05:00'
+  actions:
+    - action: persistent_notification.create
+      data:
+        notification_id: tank_2_stale
+        title: Tank 2 communication or measurement failure
+        message: No current measurements. Check power, Thread connectivity and sensor task.
+- id: tank_2_filling
+  alias: Tank 2 filling detected
+  triggers:
+    - trigger: numeric_state
+      entity_id: sensor.tank_2_net_water_change
+      above: 300
+      for: '00:10:00'
+  actions:
+    - action: persistent_notification.create
+      data:
+        notification_id: tank_2_filling
+        title: Tank 2 water change
+        message: Positive net level change detected; possible rainfall or filling.
+- id: tank_2_drop
+  alias: Tank 2 drop detected
+  triggers:
+    - trigger: numeric_state
+      entity_id: sensor.tank_2_net_water_change
+      below: -300
+      for: '00:10:00'
+  actions:
+    - action: persistent_notification.create
+      data:
+        notification_id: tank_2_drop
+        title: Tank 2 water change
+        message: Large negative net level change detected; inspect for use or leakage.

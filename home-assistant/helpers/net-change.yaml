@@ -1,0 +1,11 @@
+# Merge under sensor:. Signed net change is NOT consumption.
+- platform: derivative
+  source: sensor.tank_1_remaining_litres
+  name: Tank 1 net water change
+  unit_time: h
+  time_window: '00:15:00'
+- platform: derivative
+  source: sensor.tank_2_remaining_litres
+  name: Tank 2 net water change
+  unit_time: h
+  time_window: '00:15:00'

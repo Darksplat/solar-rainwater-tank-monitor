@@ -1,0 +1,23 @@
+name: Validate prototype
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  calculations:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.13'}
+      - run: python -m unittest discover -s tests/unit -v
+      - run: g++ -std=c++17 -Wall -Wextra -Werror tests/integration/core_test.cpp -o /tmp/core && /tmp/core
+  firmware:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix: {tank: [tank_1, tank_2]}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.13'}
+      - run: pip install -r requirements.txt
+      - run: python tools/prepare_test_secrets.py
+      - run: esphome config firmware/${{ matrix.tank }}/tank.yaml
+      - run: esphome compile firmware/${{ matrix.tank }}/tank.yaml
