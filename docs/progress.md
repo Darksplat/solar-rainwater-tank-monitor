@@ -14,7 +14,7 @@ Development continues from the original prototype; no physical acceptance or pro
 | Manufacturing | Gerbers, separated drills/maps, BOM, SMD positions, assembly illustration, board STEP | Assembler/fabricator CAM and stencil review, prototype manufacture/bring-up |
 | Purchasing |73 consolidated two-unit lines; PCB candidate MPNs and identified major equipment | Exact configured sensor order, outstanding quotes/direct offers, shipping and site cut lengths |
 | Documentation | Revision2 electrical, power, assembly, installation, calibration, HA, sourcing and validation instructions | Incorporate measured commissioning results |
-| GitHub | Public repository authorized by owner; initial0.1 source/builds previously published | Publish and verify this revised development package and its CI run |
+| GitHub | Revision0.2 published; all253 engineering files hash-matched; hosted calculations and both firmware jobs pass | Documentation-only follow-up records evidence; no physical acceptance or GitHub release tag |
 
 External dependencies: hardware and traceable test instruments; actual internal tank measurements; sensor/battery supplier confirmations; remaining discontinued-panel stock; current bought-part fixing drawings; site cable/shade/wind/soil information; access to the existing Thread border router and HA environment. No private credentials or physical measurements have been fabricated.
 

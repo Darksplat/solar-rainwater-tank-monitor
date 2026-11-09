@@ -11,3 +11,7 @@ Firmware: copy `firmware/secrets-example.yaml` to ignored `firmware/tank_1/secre
 No rated capacity is treated as measured usable capacity. Configuration is initially uncalibrated and litres/percentage remain unavailable until calibration is enabled.
 
 Build hardware with the [assembly guide](docs/assembly-guide.md), [electrical connection table](docs/electrical-design.md) and [manufacturing notes](hardware/pcb/manufacturing/README.md). Revision 0.1 binaries and wiring are historical and incompatible with revision 0.2.
+
+Owner configuration is recorded in [site settings](docs/site-configuration.md): garden water, secondary fire use, no minimum-reserve display, catalogue tank height2.32m and the existing Raspberry Pi Zero2W/PoE/Sonoff Thread network. Internal geometry and operating datums remain unverified.
+
+[Revision0.2 test images and checksums](releases/0.2.0-dev/) and [successful hosted validation](docs/publication-validation.md) are available. These are development artifacts; physical hardware and installation acceptance remain pending.

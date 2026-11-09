@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-09T06:46:35.022781+00:00",
+  "engineering_commit": "b0488ada47bff8b3b8d8a9ba1fb985d7d36acffa",
+  "published_files_hash_matched": 253,
+  "workflow_run": 42574612013,
+  "url": "https://github.com/Darksplat/solar-rainwater-tank-monitor/actions/runs/42574612013",
+  "jobs": {
+    "calculations": "success",
+    "firmware (tank_1)": "success",
+    "firmware (tank_2)": "success"
+  },
+  "scope": "engineering commit; later documentation-only evidence follow-up",
+  "physical_acceptance": "not performed"
+}
