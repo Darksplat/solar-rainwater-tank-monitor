@@ -1,3 +1,5 @@
+**Fabrication correction — 11 November 2026.** Review found that LOOP_P named both the pressure-probe terminal and the filtered positive measurement input in revision 0.2. This can bypass part of the current-limiting network through a sense resistor. The revision 0.2 PCB and manufacturing exports are superseded and require correction before fabrication. Revision 0.3 development separates the input as LOOP_SENSE_P and adds an explicit netlist check.
+
 # Revision 0.2 development fabrication package
 
 Generated from the routed KiCad 10 board. Native ERC/DRC: zero violations and zero unconnected pads. `tools/validate_manufacturing.py` checks source-to-board pad nets and export structure. A fabrication service has not performed CAM review and no board has been manufactured.

@@ -1,3 +1,5 @@
+**Fabrication correction — 11 November 2026.** Review found that LOOP_P named both the pressure-probe terminal and the filtered positive measurement input in revision 0.2. This can bypass part of the current-limiting network through a sense resistor. The revision 0.2 PCB and manufacturing exports are superseded and require correction before fabrication. Revision 0.3 development separates the input as LOOP_SENSE_P and adds an explicit netlist check.
+
 # Solar rainwater tank monitor
 
 Development revision 0.2, 9 November 2026. **Engineering prototype; not released for manufacture or installation.** Two independent solar nodes; ESP32-C6, Thread MTD, pressure-loop measurement, ESPHome API to Home Assistant.
